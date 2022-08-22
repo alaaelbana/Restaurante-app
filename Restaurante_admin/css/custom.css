@@ -101,7 +101,7 @@ button, input, a, textarea {
     text-align: right;
     padding: 0 10px 0 0px;
     min-width: 140px;
-    color: #c4c4c4;
+    color: #ddd;
 }
 
 .nice-select .option:hover,
