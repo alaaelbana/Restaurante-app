@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+    <meta name="theme-color" content="#1e2024" />
+    <link rel="apple-touch-icon" href="imgs/food.png">
+    <link rel="shortcut icon" href="imgs/food.png">
+    <title>Restaurante</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+
+    <link rel="stylesheet" href="css/fonts-Roboto-Tajawal.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+    <div class="nav_bar">
+        <div class="profile_box">
+            <div class="profile_pic"><img src="imgs/man.png" alt=""></div>
+            <div class="profile_name">admin user</div>
+        </div>
+        <div class="nav_links_box">
+            <a href="#home" class="nav_link">
+                <span class="material-icons-outlined">
+                    home
+                </span>
+                الرئيسية
+            </a>
+            <div class="nav_link categories_link_box">
+                <div class="categories_link">
+                    <span class="material-icons-outlined">
+                        restaurant
+                    </span>
+                    التصنيفات
+                    <span class="material-icons-outlined expand_more">
+                        expand_more
+                    </span>
+                </div>
+
+                <div class="nav_categories">
+                    <a href="#">برجر</a>
+                    <a href="#">بيتزا</a>
+                    <a href="#">كريب</a>
+                    <a href="#">حلو</a>
+                </div>
+            </div>
+            <a href="#about" class="nav_link">
+                <span class="material-icons-outlined">
+                    groups
+                </span>
+                عن مطعمنا
+            </a>
+            <a href="#setting" class="nav_link">
+                <span class="material-icons-outlined">
+                    manage_accounts
+                </span>
+                إعدادات الحساب
+            </a>
+            <div class="nav_link">
+                <span class="material-icons-outlined">
+                    power_settings_new
+                </span>
+                تسجيل الخروج
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="back_btn" onclick="back_btn()">
+            <div class="header_btn material-icons-outlined">
+                arrow_back
+            </div>
+        </div>
+        <div class="page_name">الرئيسية</div>
+        <div class="menu_btn">
+            <span class="header_btn material-icons-outlined">
+                menu
+            </span>
+        </div>
+    </header>
+    <div class="admin_statistics">
+        <div class="income_chart_box">
+            <div class="income_title">
+                الدخل
+                <select>
+                    <option value="1">الشهري</option>
+                    <option value="2" selected>الإسبوعي</option>
+                </select>
+            </div>
+            <div class="income_chart">
+                <canvas dir="rtl" id="chart_1"></canvas>
+            </div>
+        </div>
+        <div class="categories_chart_box">
+            <div class="orders_num">
+                عدد طلبات
+                <select class="select_categorie">
+                    <option value="0" selected>كل التصنيفات</option>
+                </select>
+                <select class="select_time">
+                    <option value="1" selected>شهريا</option>
+                    <option value="2">إسبوعيا</option>
+                    <option value="3">يوميا</option>
+                </select>
+            </div>
+            <div class="categories_names">
+            </div>
+            <div class="categories_chart">
+                <canvas id="chart_2"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="about_us_page">
+        <div class="about_us_cover">
+            <img class="img_cover" src="https://705restaurante.com.br/wp-content/uploads/restaurante-705-img2.jpg"
+                alt="">
+            <div class="about_us_img">
+                <img src="imgs/logo.png" alt="">
+            </div>
+        </div>
+        <div class="restaurante_name">
+            إسم المطعم
+        </div>
+        <div class="about_us_text">
+            <p>
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                التطبيق.
+                إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن
+                يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج
+                العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى
+                أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا
+                يليق.
+                هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو
+                حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+            </p>
+        </div>
+    </div>
+    <div class="cover" id='cover'></div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+            categorie_chart_active()
+        });
+        let ctx = document.getElementById("chart_1").getContext('2d');
+
+        var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+        gradientStroke.addColorStop(0, "#ff6c00");
+        gradientStroke.addColorStop(1, "#ff3b74");
+
+        var gradientBkgrd = ctx.createLinearGradient(0, 100, 0, 400);
+        gradientBkgrd.addColorStop(0, "rgba(244,94,132,0.2)");
+        gradientBkgrd.addColorStop(1, "rgba(249,135,94,0)");
+
+
+        const myChart = new Chart(
+            document.getElementById('chart_1'),
+            {
+                type: 'line',
+                data: {
+                    labels: [
+                        'سبت',
+                        'أحد',
+                        'إثنان',
+                        'ثلاثاء',
+                        'أربعاء',
+                        'خميس',
+                        'جمعه'
+                    ],
+                    datasets: [
+                        {
+                            label: 'الدخل اليومي',
+                            backgroundColor: gradientBkgrd,
+                            borderColor: gradientStroke,
+                            data: [1200, 1450, 1300, 1350, 1500, 1550, 1600],
+                            pointBackgroundColor: gradientStroke,
+                            pointBorderColor: "rgba(255,255,255,0)",
+                            pointHoverBorderColor: "rgba(220,220,220,1)",
+                            pointHoverBorderWidth: 3,
+                            pointHoverRadius: 5,
+                        }
+                    ]
+                },
+                options: {
+                    fill: true,
+                    tension: 0.2,
+                    interaction: {
+                        intersect: false
+                    },
+                    radius: 0,
+                    layout: {
+                        padding: 0
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                    },
+                    scales: {
+                        xAxes: {
+                            ticks: {
+                                color: '#bbb',
+                                font: {
+                                    size: 11,
+                                    weight: 700,
+                                    family: "'tajawal','Roboto', sans-serif"
+                                }
+                            },
+                            grid: {
+                                color: 'transparent',
+                            }
+                        },
+                        yAxes: {
+                            // position: 'right',
+                            ticks: {
+                                // stepSize: 100,
+                                color: '#bbb',
+                                font: {
+                                    size: 12,
+                                    family: "'tajawal','Roboto', sans-serif"
+                                }
+                            },
+                            grid: {
+                                color: '#7771'
+                            }
+                        },
+
+                    },
+
+                    tooltips: {
+                        backgroundColor: '#fff',
+                        displayColors: false,
+                        titleFontColor: '#000',
+                        bodyFontColor: '#000'
+
+                    },
+
+                }
+            }
+        );
+
+
+        var chart_name, chart_val, charts_color_num, single_categorie, single_categorie_val
+
+        const charts_color = ['rgb(65, 164, 249, .6)', 'rgb(134, 133 ,254, .6)', 'rgb(254, 79 ,169, .6)', 'rgb(254 ,107 ,90, .6)', 'rgb(114, 86, 197, .6)'];
+        const charts_border_color = ['rgb(65 164 249)', 'rgb(134 133 254)', 'rgb(254 79 169)', 'rgb(254 107 90)', 'rgb(114 86 197)'];
+
+        const categories = ['برجر', 'بيتزا', 'كريب', 'حلو'];
+        const categories_val = ['90', '50', '70', '10'];
+
+
+        for (let i = 0; i < categories.length; i++) {
+            $(".select_categorie").append('<option value="' + [i + 1] + '">ال' + categories[i] + '</option>')
+        }
+
+
+
+        var dont = new Chart(
+            document.getElementById('chart_2')
+        );
+        function categorie_chart_active() {
+            categorie_page = $('.categories_chart_box .nice-select .list .selected').attr('data-value')
+            single_categorie = ["بيتزا خضار"]
+            single_categorie_val = ["55"]
+            if (categorie_page > 0) {
+                chart_name = single_categorie
+                chart_val = single_categorie_val
+            } else {
+                chart_name = categories
+                chart_val = categories_val
+            }
+            dont.destroy()
+            charts_color_num = -1
+            $('.categories_names').html('')
+            for (let i = 0; i < chart_name.length; i++) {
+                charts_color_num++
+                if (charts_color.length > charts_color_num) {
+                    $(".categories_names").append('<div class="categorie_name"><span style="background:' + charts_color[charts_color_num] + ';"></span>' + chart_name[i] + '</div><div class="categorie_num">' + chart_val[i] + ' طلب</div>')
+                } else {
+                    charts_color_num = 0
+                    $(".categories_names").append('<div class="categorie_name"><span style="background:' + charts_color[charts_color_num] + ';"></span>' + chart_name[i] + '</div><div class="categorie_num">' + chart_val[i] + ' طلب</div>')
+                }
+            }
+            dont = new Chart(
+                document.getElementById('chart_2'),
+                {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            ...chart_name],
+                        datasets: [
+                            {
+                                label: 'My First Dataset',
+                                data: [...chart_val],
+                                backgroundColor: [...charts_color],
+                                borderColor: [...charts_border_color],
+                                hoverOffset: 4
+                            }
+                        ]
+                    },
+                    options: {
+                        layout: {
+                            padding: 5,
+                        },
+                        plugins: {
+                            legend: {
+                                display: false,
+                                // rtl: true,
+                                // position: 'bottom',
+                            },
+                        }
+                    }
+                }
+            );
+
+        }
+        $('.categories_chart_box .orders_num .select_categorie').change(function () {
+            categorie_chart_active()
+        })
+
+
+    </script>
+
+</body>
+
+</html>
