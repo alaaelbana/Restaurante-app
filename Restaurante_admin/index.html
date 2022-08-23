@@ -84,7 +84,7 @@
             </span>
         </div>
     </header>
-    <div class="admin_statistics">
+    <div class="admin_statistics hide">
         <div class="income_chart_box">
             <div class="income_title">
                 الدخل
@@ -113,6 +113,27 @@
             </div>
             <div class="categories_chart">
                 <canvas id="chart_2"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="add_category_box">
+        <div class="add_category">
+            <div class="category_title">أضف تصنيفاً جديداً</div>
+            <div class="input_box">
+                <label for="categorie_name_input">إسم التصنيف</label>
+                <input type="text" id="categorie_name_input"
+                    placeholder="مثال : مشويات ، مشروبات ، طواجن ، عروض ، الخ...">
+            </div>
+            <div class="input_box">
+                <label for="categorie_img_input">صورة التصنيف</label>
+                <input type="file" id="categorie_img_input">
+            </div>
+            <div class="input_box checkbox_box">
+                <input type="checkbox" id="categorie_checkbox">
+                <label for="categorie_checkbox">إظهار في صفحة الانتظار</label>
+            </div>
+            <div class="input_box">
+                <button>حفظ</button>
             </div>
         </div>
     </div>
