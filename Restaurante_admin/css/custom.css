@@ -405,8 +405,8 @@ button, input, a, textarea {
 }
 
 .add_category_box .category_title {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
     margin-right: -5px;
 }
 
@@ -417,20 +417,13 @@ button, input, a, textarea {
     padding: 10px 0;
 }
 
-.add_category_box .checkbox_box {
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 5px;
-    margin: 5px 0 15px;
-}
 
 .add_category_box .input_box label {
     font-size: 13px;
     font-weight: 500;
 }
 
-.add_category_box .input_box:not(.checkbox_box) input {
+.add_category_box .input_box input {
     padding: 8px 10px;
     color: #eee;
     border: 1px solid #2a2a2a;
@@ -442,12 +435,24 @@ button, input, a, textarea {
 }
 
 .add_category_box .input_box button {
-    border: 1px solid #555;
-    color: #fff;
-    background-color: #5168f4;
+    border: 1px solid #0f8956;
+    color: #20bb7b;
+    font-weight: 700;
+    background-color: transparent;
     font-family: 'tajawal', 'Roboto', sans-serif;
     padding: 7px 10px;
     border-radius: 5px;
+    width: 50%;
+    margin: 15px auto 0;
+    box-shadow: -3px -3px 8px -6px rgb(255 255 255 / 40%), 4px 4px 8px -2px rgb(0 0 0 / 40%);
+    text-shadow: 1px 1px 12px #000000c4;
+}
+
+.add_category_box .categorie_img label img {
+    height: 300px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 8px;
 }
 
 .about_us_page {

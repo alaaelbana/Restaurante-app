@@ -65,3 +65,12 @@ if (window.history && window.history.pushState) {
         }
     });
 }
+
+const fileinput = document.querySelector('.file_input');
+
+const loadimg = () => {
+    let file = fileinput.files[0];
+    if (!file) return;
+    $(".categorie_img label img").attr("src", URL.createObjectURL(fileinput.files[0]));
+}
+fileinput.addEventListener("change", loadimg);
