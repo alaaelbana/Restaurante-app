@@ -435,17 +435,17 @@ button, input, a, textarea {
 }
 
 .add_category_box .input_box button {
-    border: 1px solid #0f8956;
-    color: #20bb7b;
+    border: 2px solid #0fac6a33;
+    color: #13a568;
     font-weight: 700;
     background-color: transparent;
     font-family: 'tajawal', 'Roboto', sans-serif;
     padding: 7px 10px;
     border-radius: 5px;
-    width: 50%;
+    width: 52%;
     margin: 15px auto 0;
     box-shadow: -3px -3px 8px -6px rgb(255 255 255 / 40%), 4px 4px 8px -2px rgb(0 0 0 / 40%);
-    text-shadow: 1px 1px 12px #000000c4;
+    text-shadow: 0px 0px 12px #0000004f;
 }
 
 .add_category_box .categorie_img label img {
