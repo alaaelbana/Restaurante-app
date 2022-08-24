@@ -72,5 +72,6 @@ const loadimg = () => {
     let file = fileinput.files[0];
     if (!file) return;
     $(".categorie_img label img").attr("src", URL.createObjectURL(fileinput.files[0]));
+    $('.categorie_img_show').removeClass('categorie_img_show')
 }
 fileinput.addEventListener("change", loadimg);
