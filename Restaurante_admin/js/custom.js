@@ -1,25 +1,3 @@
-var idleTime = 0;
-$(document).ready(function () {
-    var idleInterval = setInterval(timerIncrement, 60000);
-    document.addEventListener('touchmove', function (e) {
-        idleTime = 0;
-    }, false);
-    $("body").mousemove(function (e) {
-        idleTime = 0;
-    });
-    $("body").click(function (e) {
-        idleTime = 0;
-    });
-});
-
-function timerIncrement() {
-    idleTime = idleTime + 1;
-    if (idleTime > 4) { // 20 minutes
-        window.location.hash = '#home'
-        total_amount = 0
-    }
-}
-
 $('.categories_link').click(function () {
     $('.nav_categories').slideToggle()
     $('.expand_more').toggleClass('rotat')
@@ -45,7 +23,7 @@ document.getElementById("cover").addEventListener('touchmove', function (e) {
         $('.cover').fadeOut()
     }, 100);
 }, false);
-
+var if_edit = 0
 if (window.history && window.history.pushState) {
     $(window).on('popstate', function () {
         if (window.location.hash == "") {
@@ -63,10 +41,35 @@ if (window.history && window.history.pushState) {
         } else {
             $('.about_us_page').hide()
         }
+        if (window.location.hash == "#add_category") {
+            $('.add_category_box').show()
+            $('.page_name').text('أضف تصنيف')
+        } else {
+            $('.add_category_box').hide()
+        }
+        if (window.location.hash == "#edit_category") {
+            $('.edit_category_box').show()
+            $('.page_name').text('تعديل تصنيف')
+        } else {
+            $('.edit_category_box').hide()
+        }
+        if (window.location.hash == "#edit_category_single") {
+            if (if_edit == 1) {
+                $('.edit_category_sinle').show()
+                $('.page_name').text('تعديل تصنيف')
+            } else {
+                $('.admin_statistics').show()
+                $('.page_name').text('الرئيسية')
+            }
+        } else {
+            if_edit = 0
+            $('.edit_category_sinle').hide()
+        }
     });
 }
 
-const fileinput = document.querySelector('.file_input');
+const fileinput = document.getElementById('categorie_img_input');
+const fileinput_edit = document.getElementById('edit_categorie_img_input');
 
 const loadimg = () => {
     let file = fileinput.files[0];
@@ -75,3 +78,18 @@ const loadimg = () => {
     $('.categorie_img_show').removeClass('categorie_img_show')
 }
 fileinput.addEventListener("change", loadimg);
+
+const loadimg_edit = () => {
+    let file = fileinput_edit.files[0];
+    if (!file) return;
+    $(".edit_category_sinle .categorie_img label img").attr("src", URL.createObjectURL(fileinput_edit.files[0]));
+    $('.edit_category_sinle .edit_categorie_img_show').removeClass('categorie_img_show')
+}
+fileinput_edit.addEventListener("change", loadimg_edit);
+
+$('.category_box').click(function () {
+    $('.edit_category_sinle .add_category #edit_categorie_name_input').val($(this).find('.category_name').text())
+    $(".edit_category_sinle .categorie_img label img").attr("src", $(this).find('.category_img img').attr('src'))
+    $('.edit_category_sinle .edit_categorie_img_show').addClass('categorie_img_show')
+    if_edit = 1
+})

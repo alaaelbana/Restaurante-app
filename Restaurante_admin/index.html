@@ -45,10 +45,9 @@
                 </div>
 
                 <div class="nav_categories">
-                    <a href="#">برجر</a>
-                    <a href="#">بيتزا</a>
-                    <a href="#">كريب</a>
-                    <a href="#">حلو</a>
+                    <a href="#add_category">اضف تصنيف</a>
+                    <a href="#edit_category">تعديل تصنيف</a>
+                    <a href="#">حذف تصنيف</a>
                 </div>
             </div>
             <a href="#about" class="nav_link">
@@ -84,7 +83,7 @@
             </span>
         </div>
     </header>
-    <div class="admin_statistics hide">
+    <div class="admin_statistics">
         <div class="income_chart_box">
             <div class="income_title">
                 الدخل
@@ -129,6 +128,56 @@
                 <label class="categorie_img_show" for="categorie_img_input"><img loading="lazy"
                         src="imgs/upload_img.png" alt=""></label>
                 <input hidden type="file" class="file_input" id="categorie_img_input">
+            </div>
+            <div class="input_box">
+                <button>حفظ</button>
+            </div>
+        </div>
+    </div>
+    <div class="edit_category_box">
+        <div class="edit_category_title">تعديل التصنيفات
+            <span>إضغط علي التصنيف المراد التعديل عليه</span>
+        </div>
+        <div class="edit_category">
+            <a href="#edit_category_single" class="category_box">
+                <div class="category_img"><img src="imgs/categories/Burgers.webp" alt=""></div>
+                <div class="category_name">برجر</div>
+            </a>
+            <a href="#edit_category_single" class="category_box">
+                <div class="category_img"><img src="imgs/categories/pizza.jpg" alt=""></div>
+                <div class="category_name">بيتزا</div>
+            </a>
+            <a href="#edit_category_single" class="category_box">
+                <div class="category_img"><img src="imgs/categories/crepe.jpg" alt=""></div>
+                <div class="category_name">كريب</div>
+            </a>
+            <a href="#edit_category_single" class="category_box">
+                <div class="category_img"><img src="imgs/categories/sweat.jpeg" alt=""></div>
+                <div class="category_name">حلويات</div>
+            </a>
+            <a href="#edit_category_single" class="category_box">
+                <div class="category_img"><img src="imgs/order1.jpg" alt=""></div>
+                <div class="category_name">عروض</div>
+            </a>
+            <a href="#edit_category_single" class="category_box">
+                <div class="category_img"><img src="imgs/categories/juice.jpg" alt=""></div>
+                <div class="category_name">مشروبات</div>
+            </a>
+        </div>
+    </div>
+    <div class="edit_category_sinle">
+        <div class="add_category">
+            <div class="category_title">تعديل تصنيف</div>
+            <div class="input_box">
+                <label for="edit_categorie_name_input">إسم التصنيف</label>
+                <input type="text" id="edit_categorie_name_input"
+                    placeholder="مثال : مشويات ، مشروبات ، طواجن ، عروض ، الخ...">
+            </div>
+            <div class="input_box categorie_img">
+                <label for="edit_categorie_img_input">صورة التصنيف</label>
+                <label class="edit_categorie_img_show categorie_img_show" for="edit_categorie_img_input"><img
+                        loading="lazy" src="imgs/categories/juice.jpg" alt=""></label>
+                <input hidden="" type="file" class="file_input" id="edit_categorie_img_input">
             </div>
             <div class="input_box">
                 <button>حفظ</button>
