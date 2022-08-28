@@ -475,25 +475,25 @@ button, input, a, textarea {
     text-shadow: 0px 0px 12px #0000004f;
 }
 
-.edit_category_box, .edit_category_sinle {
+.edit_category_box, .edit_category_sinle, .delete_category_box {
     padding: 65px 10px 0;
     direction: rtl;
     display: none;
 }
 
-.edit_category_box .edit_category_title {
+.edit_category_box .edit_category_title, .delete_category_box .delete_category_title {
     font-size: 19px;
-    padding: 5px 0 20px;
+    padding: 0px 0 20px;
 }
 
-.edit_category_box .edit_category_title span {
+.edit_category_box .edit_category_title span, .delete_category_box .delete_category_title span {
     display: block;
     font-size: 13px;
     padding: 8px 5px 2px;
     color: #cccccc;
 }
 
-.edit_category_box .edit_category {
+.edit_category_box .edit_category, .delete_category_box .delete_category {
     gap: 10px;
     padding: 0 5px;
     display: flex;
@@ -501,7 +501,7 @@ button, input, a, textarea {
     direction: rtl;
 }
 
-.edit_category_box .edit_category .category_box {
+.edit_category_box .edit_category .category_box, .delete_category_box .delete_category .category_box {
     color: #fff;
     width: calc(50% - 5px);
     display: flex;
@@ -514,12 +514,12 @@ button, input, a, textarea {
     cursor: default;
 }
 
-.edit_category_box .edit_category .category_box .category_img {
+.edit_category_box .edit_category .category_box .category_img, .delete_category_box .delete_category .category_box .category_img {
     height: 100%;
     display: flex;
 }
 
-.edit_category_box .edit_category .category_box .category_img::after {
+.edit_category_box .edit_category .category_box .category_img::after, .delete_category_box .delete_category .category_box .category_img::after {
     top: 0;
     left: 0;
     content: '';
@@ -529,11 +529,11 @@ button, input, a, textarea {
     background-color: #0000004d;
 }
 
-.edit_category_box .edit_category .category_box .category_img img {
+.edit_category_box .edit_category .category_box .category_img img, .delete_category_box .delete_category .category_box .category_img img {
     border-radius: 12px;
 }
 
-.edit_category_box .edit_category .category_box .category_name {
+.edit_category_box .edit_category .category_box .category_name, .delete_category_box .delete_category .category_box .category_name {
     position: absolute;
     z-index: 9;
     font-size: 23px;
@@ -552,6 +552,67 @@ button, input, a, textarea {
 .edit_category_sinle .add_category .input_box .categorie_img_show::after {
     content: 'إضغط لتحميل صورة جديدة';
     bottom: -5px;
+}
+
+.delete_confirmation_box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 25px;
+    width: 100%;
+    direction: rtl;
+    z-index: 998;
+    display: none;
+
+}
+
+.delete_confirmation_box .delete_confirmation {
+    background-color: #202227;
+    padding: 25px 15px;
+    box-shadow: 0 0 10px -3px rgb(20 20 20 / 73%);
+    background-color: #202227;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.delete_confirmation_box .delete_confirmation .delete_confirmation_title {
+    font-size: 18px;
+}
+
+.delete_confirmation_box .delete_confirmation .delete_confirmation_description {
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 15px 4% 25px;
+    color: #aaa;
+}
+
+.delete_confirmation_box .delete_confirmation .delete_confirmation_btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.delete_confirmation_box .delete_confirmation .delete_confirmation_btns button {
+    padding: 6px 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: -3px -3px 7px -6px rgb(255 255 255 / 40%), 3px 3px 8px -2px rgb(0 0 0 / 35%);
+    background-color: transparent;
+    color: #fff;
+    font-family: 'tajawal', 'Roboto', sans-serif;
+    border: none;
+}
+
+.delete_confirmation_box .delete_confirmation .delete_confirmation_btns .delete_btn {
+    background: linear-gradient(90deg, rgb(252, 90, 26) 0%, rgb(248, 39, 18) 100%);
+    padding: 6px 30px;
+    box-shadow: none;
 }
 
 .about_us_page {

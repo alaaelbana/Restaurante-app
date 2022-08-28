@@ -13,6 +13,7 @@ $('.menu_btn').click(function () {
 })
 $('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories').click(function () {
     $('.nav_categories').slideUp()
+    $('.delete_confirmation_box').hide()
     $('.expand_more').removeClass('rotat')
     $('.nav_bar').removeClass('nav_show')
     $('.cover').fadeOut()
@@ -65,6 +66,21 @@ if (window.history && window.history.pushState) {
             if_edit = 0
             $('.edit_category_sinle').hide()
         }
+        if (window.location.hash == "#delete_category") {
+            $('.delete_confirmation_box').hide()
+            $('.page_name').text('حذف تصنيف')
+            $('.delete_category_box').show()
+            $('.cover').fadeOut()
+
+        } else if (window.location.hash == "#delete_category_single") {
+            $('.cover').fadeIn()
+            $('.delete_confirmation_box').show()
+        } else {
+            $('.delete_confirmation_box').hide()
+            $('.delete_category_box').hide()
+            $('.cover').fadeOut()
+
+        }
     });
 }
 
@@ -92,4 +108,8 @@ $('.category_box').click(function () {
     $(".edit_category_sinle .categorie_img label img").attr("src", $(this).find('.category_img img').attr('src'))
     $('.edit_category_sinle .edit_categorie_img_show').addClass('categorie_img_show')
     if_edit = 1
+})
+$('.delete_confirmation_box .delete_confirmation .delete_confirmation_btns button').click(function () {
+    $('.delete_confirmation_box').hide()
+    $('.cover').fadeOut()
 })
