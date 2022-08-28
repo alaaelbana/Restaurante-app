@@ -13,7 +13,9 @@ $('.menu_btn').click(function () {
 })
 $('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories').click(function () {
     $('.nav_categories').slideUp()
-    $('.delete_confirmation_box').hide()
+    if (window.location.hash == "#delete_category_single") {
+        history.back()
+    }
     $('.expand_more').removeClass('rotat')
     $('.nav_bar').removeClass('nav_show')
     $('.cover').fadeOut()
@@ -25,6 +27,7 @@ document.getElementById("cover").addEventListener('touchmove', function (e) {
     }, 100);
 }, false);
 var if_edit = 0
+var if_delete = 0
 if (window.history && window.history.pushState) {
     $(window).on('popstate', function () {
         if (window.location.hash == "") {
@@ -59,8 +62,7 @@ if (window.history && window.history.pushState) {
                 $('.edit_category_sinle').show()
                 $('.page_name').text('تعديل تصنيف')
             } else {
-                $('.admin_statistics').show()
-                $('.page_name').text('الرئيسية')
+                history.back()
             }
         } else {
             if_edit = 0
@@ -73,9 +75,15 @@ if (window.history && window.history.pushState) {
             $('.cover').fadeOut()
 
         } else if (window.location.hash == "#delete_category_single") {
-            $('.cover').fadeIn()
-            $('.delete_confirmation_box').show()
+            if (if_delete == 1) {
+                $('.cover').fadeIn()
+                $('.delete_confirmation_box').show()
+                if_delete = 0
+            } else {
+                history.back()
+            }
         } else {
+            if_delete = 0
             $('.delete_confirmation_box').hide()
             $('.delete_category_box').hide()
             $('.cover').fadeOut()
@@ -103,13 +111,15 @@ const loadimg_edit = () => {
 }
 fileinput_edit.addEventListener("change", loadimg_edit);
 
-$('.category_box').click(function () {
+$('.edit_category_box .category_box').click(function () {
     $('.edit_category_sinle .add_category #edit_categorie_name_input').val($(this).find('.category_name').text())
     $(".edit_category_sinle .categorie_img label img").attr("src", $(this).find('.category_img img').attr('src'))
     $('.edit_category_sinle .edit_categorie_img_show').addClass('categorie_img_show')
     if_edit = 1
 })
+$('.delete_category_box .category_box').click(function () {
+    if_delete = 1
+})
 $('.delete_confirmation_box .delete_confirmation .delete_confirmation_btns button').click(function () {
-    $('.delete_confirmation_box').hide()
-    $('.cover').fadeOut()
+    history.back()
 })
