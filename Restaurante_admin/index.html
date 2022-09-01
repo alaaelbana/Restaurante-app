@@ -45,9 +45,26 @@
                 </div>
 
                 <div class="nav_categories">
-                    <a href="#add_category">اضف تصنيف</a>
+                    <a href="#add_category">أضف تصنيف</a>
                     <a href="#edit_category">تعديل تصنيف</a>
                     <a href="#delete_category">حذف تصنيف</a>
+                </div>
+            </div>
+            <div class="nav_link categories_link_box">
+                <div class="categories_link">
+                    <span class="material-icons-outlined">
+                        restaurant
+                    </span>
+                    المنتجات
+                    <span class="material-icons-outlined expand_more">
+                        expand_more
+                    </span>
+                </div>
+
+                <div class="nav_categories">
+                    <a href="#add_producer">أضف منتج</a>
+                    <a href="#edit_producer">تعديل منتج</a>
+                    <a href="#delete_producer">حذف منتج</a>
                 </div>
             </div>
             <a href="#about" class="nav_link">
@@ -125,7 +142,7 @@
             </div>
             <div class="input_box categorie_img">
                 <label for="categorie_img_input">صورة التصنيف</label>
-                <label class="categorie_img_show" for="categorie_img_input"><img loading="lazy"
+                <label class="img_show" for="categorie_img_input"><img loading="lazy"
                         src="imgs/upload_img.png" alt=""></label>
                 <input hidden type="file" class="file_input" id="categorie_img_input">
             </div>
@@ -175,8 +192,8 @@
             </div>
             <div class="input_box categorie_img">
                 <label for="edit_categorie_img_input">صورة التصنيف</label>
-                <label class="edit_categorie_img_show categorie_img_show" for="edit_categorie_img_input"><img
-                        loading="lazy" src="imgs/categories/juice.jpg" alt=""></label>
+                <label class="img_show edit_categorie_img_show" for="edit_categorie_img_input"><img loading="lazy"
+                        src="imgs/categories/juice.jpg" alt=""></label>
                 <input hidden="" type="file" class="file_input" id="edit_categorie_img_input">
             </div>
             <div class="input_box">
@@ -226,6 +243,98 @@
             <div class="delete_confirmation_btns">
                 <button>إلغاء</button>
                 <button class="delete_btn">نعم قم بالحذف</button>
+            </div>
+        </div>
+    </div>
+    <div class="add_producer_box">
+        <div class="add_producer">
+            <div class="producer_title">أضف منتجاً جديداً</div>
+            <div class="input_box select_categorie_box">
+                <label>إختر تصنيف المنتج : </label>
+                <select class="select_categorie">
+                </select>
+            </div>
+            <div class="input_box select_size_box">
+                <label>عدد الأحجام المتوفرة للمنتج : </label>
+                <select class="select_size_num">
+                    <option value="0" selected="">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="input_box">
+                <label for="producer_name_input">إسم المنتج</label>
+                <input type="text" id="producer_name_input" placeholder="اضف اسم المنتج هنا ...">
+            </div>
+            <div class="input_box producer_price ">
+                <label for="producer_price_input">سعر المنتج</label>
+                <input type="number" id="producer_price_input" placeholder="اضف سعر المنتج هنا ...">
+            </div>
+            <div class="product_size_price_box">
+                <div class="input_box">
+                    <label for="producer_size_input1">حجم المنتج</label>
+                    <input type="text" id="producer_size_input1" placeholder="اضف حجم المنتج هنا ...">
+                </div>
+                <div class="input_box">
+                    <label for="producer_price_input1">سعره</label>
+                    <input type="number" id="producer_price_input1" placeholder="اضف سعر المنتج هنا ...">
+                </div>
+            </div>
+            <div class="product_size_price_box">
+                <div class="input_box">
+                    <label for="producer_size_input2">حجم المنتج</label>
+                    <input type="text" id="producer_size_input2" placeholder="اضف حجم المنتج هنا ...">
+                </div>
+                <div class="input_box">
+                    <label for="producer_price_input2">سعره</label>
+                    <input type="number" id="producer_price_input2" placeholder="اضف سعر المنتج هنا ...">
+                </div>
+            </div>
+            <div class="product_size_price_box">
+                <div class="input_box">
+                    <label for="producer_size_input3">حجم المنتج</label>
+                    <input type="text" id="producer_size_input3" placeholder="اضف حجم المنتج هنا ...">
+                </div>
+                <div class="input_box">
+                    <label for="producer_price_input3">سعره</label>
+                    <input type="number" id="producer_price_input3" placeholder="اضف سعر المنتج هنا ...">
+                </div>
+            </div>
+            <div class="product_size_price_box">
+                <div class="input_box">
+                    <label for="producer_size_input4">حجم المنتج</label>
+                    <input type="text" id="producer_size_input4" placeholder="اضف حجم المنتج هنا ...">
+                </div>
+                <div class="input_box">
+                    <label for="producer_price_input4">سعره</label>
+                    <input type="number" id="producer_price_input4" placeholder="اضف سعر المنتج هنا ...">
+                </div>
+            </div>
+            <div class="product_size_price_box">
+                <div class="input_box">
+                    <label for="producer_size_input5">حجم المنتج</label>
+                    <input type="text" id="producer_size_input5" placeholder="اضف حجم المنتج هنا ...">
+                </div>
+                <div class="input_box">
+                    <label for="producer_price_input5">سعره</label>
+                    <input type="number" id="producer_price_input5" placeholder="اضف سعر المنتج هنا ...">
+                </div>
+            </div>
+            <div class="input_box producer_img">
+                <label for="producer_img_input">صورة المنتج</label>
+                <label class="img_show" for="producer_img_input"><img loading="lazy" src="imgs/upload_img.png"
+                        alt=""></label>
+                <input hidden type="file" class="file_input" id="producer_img_input">
+            </div>
+            <div class="input_box">
+                <label for="producer_details_input">وصف المنتج</label>
+                <textarea id="producer_details_input" placeholder="اضف وصف المنتج هنا ..." rows="6"></textarea>
+            </div>
+            <div class="input_box">
+                <button>إضافة</button>
             </div>
         </div>
     </div>
@@ -375,7 +484,7 @@
 
 
         for (let i = 0; i < categories.length; i++) {
-            $(".select_categorie").append('<option value="' + [i + 1] + '">ال' + categories[i] + '</option>')
+            $(".select_categorie").append('<option value="' + [i + 1] + '">' + categories[i] + '</option>')
         }
 
 
@@ -443,6 +552,20 @@
             categorie_chart_active()
         })
 
+        $('.product_size_price_box').hide()
+        $('.add_producer .product_size_price_box').addClass('show')
+        var size_num
+        $('.add_producer .input_box.select_size_box .select_size_num').change(function () {
+            size_num = $('.add_producer .input_box.select_size_box .nice-select .list .selected').attr('data-value')
+            if (size_num == 0) {
+                $('.producer_price').show()
+                $('.product_size_price_box').hide()
+            } else {
+                $('.producer_price').hide()
+                $('.product_size_price_box').hide()
+                $('.add_producer .product_size_price_box').slice(0, size_num).show();
+            }
+        })
 
     </script>
 

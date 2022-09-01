@@ -1,6 +1,6 @@
 $('.categories_link').click(function () {
-    $('.nav_categories').slideToggle()
-    $('.expand_more').toggleClass('rotat')
+    $(this).parent().find('.nav_categories').slideToggle()
+    $(this).find('.expand_more').toggleClass('rotat')
 })
 
 function back_btn() {
@@ -61,6 +61,7 @@ if (window.history && window.history.pushState) {
             if (if_edit == 1) {
                 $('.edit_category_sinle').show()
                 $('.page_name').text('تعديل تصنيف')
+                $('.edit_category_sinle .file_input').val('')
             } else {
                 history.back()
             }
@@ -89,32 +90,28 @@ if (window.history && window.history.pushState) {
             $('.cover').fadeOut()
 
         }
+        if (window.location.hash == "#add_producer") {
+            $('.add_producer_box').show()
+            $('.page_name').text('أضف منتج')
+        } else {
+            $('.add_producer_box').hide()
+        }
     });
 }
 
-const fileinput = document.getElementById('categorie_img_input');
-const fileinput_edit = document.getElementById('edit_categorie_img_input');
 
-const loadimg = () => {
-    let file = fileinput.files[0];
-    if (!file) return;
-    $(".categorie_img label img").attr("src", URL.createObjectURL(fileinput.files[0]));
-    $('.categorie_img_show').removeClass('categorie_img_show')
-}
-fileinput.addEventListener("change", loadimg);
+$('.input_box .file_input').change(function () {
+    if (!$(this).get(0).files[0]) return;
+    $(this).parent().find('label img').attr("src", URL.createObjectURL($(this).get(0).files[0]))
+    $(this).parent().find('.img_show').removeClass('img_show')
 
-const loadimg_edit = () => {
-    let file = fileinput_edit.files[0];
-    if (!file) return;
-    $(".edit_category_sinle .categorie_img label img").attr("src", URL.createObjectURL(fileinput_edit.files[0]));
-    $('.edit_category_sinle .edit_categorie_img_show').removeClass('categorie_img_show')
-}
-fileinput_edit.addEventListener("change", loadimg_edit);
+})
+
 
 $('.edit_category_box .category_box').click(function () {
     $('.edit_category_sinle .add_category #edit_categorie_name_input').val($(this).find('.category_name').text())
     $(".edit_category_sinle .categorie_img label img").attr("src", $(this).find('.category_img img').attr('src'))
-    $('.edit_category_sinle .edit_categorie_img_show').addClass('categorie_img_show')
+    $('.edit_category_sinle .edit_categorie_img_show').addClass('img_show')
     if_edit = 1
 })
 $('.delete_category_box .category_box').click(function () {

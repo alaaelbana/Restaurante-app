@@ -15,7 +15,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    /* display: none; */
+    display: none;
 }
 
 img {
@@ -249,9 +249,8 @@ button, input, a, textarea {
     transition: .5s left;
 }
 
-.admin_statistics, .add_category_box {
-    padding: 65px 15px 0;
-    text-align: right;
+.admin_statistics {
+    padding: 65px 15px 30px;
     direction: rtl;
     width: 100%;
 }
@@ -381,7 +380,9 @@ button, input, a, textarea {
     font-weight: 500;
 }
 
-.income_chart_box .income_title .nice-select::after {
+.income_chart_box .income_title .nice-select::after,
+.select_categorie_box .nice-select:after,
+.select_size_box .nice-select:after {
     border-bottom: 2px solid #ff7f4d;
     border-right: 2px solid #ff7f4d;
     margin-top: -5px;
@@ -389,15 +390,35 @@ button, input, a, textarea {
     width: 6px;
 }
 
+.select_categorie_box .nice-select,
+.select_size_box .nice-select {
+    font-size: 13px;
+}
+
+.select_size_box .nice-select span {
+    display: inline-block;
+    transform: translateY(2px);
+}
+
+.select_categorie_box .nice-select:after {
+    margin-top: -3px;
+    left: 2px;
+    width: 5px;
+    height: 5px;
+}
+
+.select_size_box .nice-select:after {
+    left: 2px;
+    width: 5px;
+    height: 5px;
+    margin-top: -3px;
+}
+
 .income_chart_box .income_title .nice-select .list .option {
     min-width: 100px;
 }
 
-.add_category_box {
-    display: none;
-}
-
-.add_category {
+.add_category, .add_producer {
     width: 100%;
     padding: 20px;
     background-color: #202227;
@@ -405,33 +426,75 @@ button, input, a, textarea {
     margin-top: 10px;
 }
 
-.add_category .category_title {
+.add_category .category_title, .add_producer .producer_title {
     font-size: 18px;
     margin-bottom: 10px;
     margin-right: -5px;
 }
 
-.add_category .input_box {
+.add_category .input_box, .add_producer .input_box {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 15px 0;
 }
 
+.add_producer .input_box {
+    padding: 12px 0;
+}
 
-.add_category .input_box label {
+.add_producer .product_size_price_box {
+    display: flex;
+    gap: 15px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.add_producer .product_size_price_box.show {
+    height: auto;
+}
+
+.add_producer .product_size_price_box .input_box {
+    width: calc(50% - 5px);
+}
+
+.add_producer .input_box.select_categorie_box,
+.add_producer .input_box.select_size_box {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding: 20px 0 15px;
+}
+
+.add_producer .input_box.select_categorie_box .nice-select,
+.add_producer .input_box.select_size_box .nice-select {
+
+    line-height: normal;
+    height: auto;
+}
+
+.add_producer .input_box.select_categorie_box .nice-select .list,
+.add_producer .input_box.select_size_box .nice-select .list {
+    top: calc(100% + 12px);
+    right: -3px;
+}
+
+.add_category .input_box label,
+.add_producer .input_box label {
     font-size: 13px;
     font-weight: 500;
     position: relative;
 }
 
-.add_category .categorie_img label img {
+.add_category .categorie_img label img,
+.add_producer .producer_img label img {
     max-height: 80vw;
     margin-top: 15px;
     border-radius: 8px;
 }
 
-.add_category .categorie_img .categorie_img_show img {
+.add_category .categorie_img .img_show img,
+.add_producer .producer_img .img_show img {
     height: 190px;
     padding: 25px 0;
     margin: 15px 0;
@@ -440,7 +503,8 @@ button, input, a, textarea {
     opacity: .9;
 }
 
-.add_category .input_box .categorie_img_show::after {
+.add_category .input_box .img_show::after,
+.add_producer .input_box .img_show::after {
     content: 'إضغط لتحميل الصورة';
     position: absolute;
     bottom: 10px;
@@ -450,7 +514,9 @@ button, input, a, textarea {
     color: #ddd;
 }
 
-.add_category .input_box input {
+.add_category .input_box input,
+.add_producer .input_box input,
+.add_producer .input_box textarea {
     padding: 8px 10px;
     color: #eee;
     border: 1px solid #2a2a2a;
@@ -459,9 +525,12 @@ button, input, a, textarea {
     margin-top: 8px;
     font-size: 13px;
     border-radius: 5px;
+    max-width: 100%;
+    min-width: 100%;
 }
 
-.add_category .input_box button {
+.add_category .input_box button,
+.add_producer .input_box button {
     border: 2px solid #0fac6a33;
     color: #ddd;
     font-weight: 700;
@@ -475,25 +544,29 @@ button, input, a, textarea {
     text-shadow: 0px 0px 12px #0000004f;
 }
 
-.edit_category_box, .edit_category_sinle, .delete_category_box {
-    padding: 65px 10px 0;
+.edit_category_box, .edit_category_sinle, .delete_category_box, .add_category_box, .add_producer_box {
+    padding: 65px 10px 30px;
     direction: rtl;
+    width: 100%;
     display: none;
 }
 
-.edit_category_box .edit_category_title, .delete_category_box .delete_category_title {
+.edit_category_box .edit_category_title,
+.delete_category_box .delete_category_title {
     font-size: 19px;
     padding: 0px 0 20px;
 }
 
-.edit_category_box .edit_category_title span, .delete_category_box .delete_category_title span {
+.edit_category_box .edit_category_title span,
+.delete_category_box .delete_category_title span {
     display: block;
     font-size: 13px;
     padding: 8px 5px 2px;
     color: #cccccc;
 }
 
-.edit_category_box .edit_category, .delete_category_box .delete_category {
+.edit_category_box .edit_category,
+.delete_category_box .delete_category {
     gap: 10px;
     padding: 0 5px;
     display: flex;
@@ -501,7 +574,8 @@ button, input, a, textarea {
     direction: rtl;
 }
 
-.edit_category_box .edit_category .category_box, .delete_category_box .delete_category .category_box {
+.edit_category_box .edit_category .category_box,
+.delete_category_box .delete_category .category_box {
     color: #fff;
     width: calc(50% - 5px);
     display: flex;
@@ -514,12 +588,14 @@ button, input, a, textarea {
     cursor: default;
 }
 
-.edit_category_box .edit_category .category_box .category_img, .delete_category_box .delete_category .category_box .category_img {
+.edit_category_box .edit_category .category_box .category_img,
+.delete_category_box .delete_category .category_box .category_img {
     height: 100%;
     display: flex;
 }
 
-.edit_category_box .edit_category .category_box .category_img::after, .delete_category_box .delete_category .category_box .category_img::after {
+.edit_category_box .edit_category .category_box .category_img::after,
+.delete_category_box .delete_category .category_box .category_img::after {
     top: 0;
     left: 0;
     content: '';
@@ -529,11 +605,13 @@ button, input, a, textarea {
     background-color: #0000004d;
 }
 
-.edit_category_box .edit_category .category_box .category_img img, .delete_category_box .delete_category .category_box .category_img img {
+.edit_category_box .edit_category .category_box .category_img img,
+.delete_category_box .delete_category .category_box .category_img img {
     border-radius: 12px;
 }
 
-.edit_category_box .edit_category .category_box .category_name, .delete_category_box .delete_category .category_box .category_name {
+.edit_category_box .edit_category .category_box .category_name,
+.delete_category_box .delete_category .category_box .category_name {
     position: absolute;
     z-index: 9;
     font-size: 23px;
@@ -545,11 +623,11 @@ button, input, a, textarea {
     padding-bottom: 0;
 }
 
-.edit_category_sinle .add_category .categorie_img .categorie_img_show img {
+.edit_category_sinle .add_category .categorie_img .img_show img {
     margin: 0;
 }
 
-.edit_category_sinle .add_category .input_box .categorie_img_show::after {
+.edit_category_sinle .add_category .input_box .img_show::after {
     content: 'إضغط لتحميل صورة جديدة';
     bottom: -5px;
 }
