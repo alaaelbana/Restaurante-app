@@ -8,7 +8,10 @@ function back_btn() {
 }
 
 $('.menu_btn').click(function () {
-    $('.nav_bar').toggleClass('nav_show')
+    $('.nav_bar').show()
+    setTimeout(() => {
+        $('.nav_bar').toggleClass('nav_show')
+    }, 10);
     $('.cover').fadeToggle()
 })
 $('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories').click(function () {
@@ -18,14 +21,19 @@ $('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories').click(func
     }
     $('.expand_more').removeClass('rotat')
     $('.nav_bar').removeClass('nav_show')
+    $('.nav_bar').fadeOut()
     $('.cover').fadeOut()
 })
+
 document.getElementById("cover").addEventListener('touchmove', function (e) {
     setTimeout(() => {
         $('.page_content ,.nav_bar').removeClass('nav_show')
+        $('.nav_bar').fadeOut()
         $('.cover').fadeOut()
     }, 100);
-}, false);
+}, {
+    passive: true
+});
 var if_edit = 0
 var if_delete = 0
 if (window.history && window.history.pushState) {
@@ -90,11 +98,23 @@ if (window.history && window.history.pushState) {
             $('.cover').fadeOut()
 
         }
-        if (window.location.hash == "#add_producer") {
-            $('.add_producer_box').show()
+        if (window.location.hash == "#add_product") {
+            $('.add_product_box').show()
             $('.page_name').text('أضف منتج')
         } else {
-            $('.add_producer_box').hide()
+            $('.add_product_box').hide()
+        }
+        if (window.location.hash == "#edit_product") {
+            $('.edit_product_box').show()
+            $('.page_name').text('تعديل منتج')
+        } else {
+            $('.edit_product_box').hide()
+        }
+        if (window.location.hash == "#delete_product") {
+            $('.delete_product_box').show()
+            $('.page_name').text('حذف منتج')
+        } else {
+            $('.delete_product_box').hide()
         }
     });
 }
@@ -119,4 +139,10 @@ $('.delete_category_box .category_box').click(function () {
 })
 $('.delete_confirmation_box .delete_confirmation .delete_confirmation_btns button').click(function () {
     history.back()
+})
+$('.order_box .order_text .order_options select').change(function () {
+    size_selected = $(this).parent().find('.selected').attr('data-value')
+    $(this).parents('.order_text').find('.order_price span').addClass('hide')
+    $(this).parents('.order_text').find('.order_price span:nth-child(' + size_selected + ')').removeClass('hide')
+    $(this).parents('.order_text').find('.order_num .input_num').val($(this).parent().find('.nice-select .selected').attr('price_val'))
 })

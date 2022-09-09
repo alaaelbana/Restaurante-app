@@ -166,6 +166,7 @@ button, input, a, textarea {
     overflow: auto;
     direction: rtl;
     font-size: 16px;
+    display: none;
     background: linear-gradient(180deg, rgb(30 31 36) 0%, rgb(25 28 30) 100%);
 }
 
@@ -418,7 +419,7 @@ button, input, a, textarea {
     min-width: 100px;
 }
 
-.add_category, .add_producer {
+.add_category, .add_product {
     width: 100%;
     padding: 20px;
     background-color: #202227;
@@ -426,75 +427,75 @@ button, input, a, textarea {
     margin-top: 10px;
 }
 
-.add_category .category_title, .add_producer .producer_title {
+.add_category .category_title, .add_product .product_title {
     font-size: 18px;
     margin-bottom: 10px;
     margin-right: -5px;
 }
 
-.add_category .input_box, .add_producer .input_box {
+.add_category .input_box, .add_product .input_box {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 15px 0;
 }
 
-.add_producer .input_box {
+.add_product .input_box {
     padding: 12px 0;
 }
 
-.add_producer .product_size_price_box {
+.add_product .product_size_price_box {
     display: flex;
     gap: 15px;
     height: 0px;
     overflow: hidden;
 }
 
-.add_producer .product_size_price_box.show {
+.add_product .product_size_price_box.show {
     height: auto;
 }
 
-.add_producer .product_size_price_box .input_box {
+.add_product .product_size_price_box .input_box {
     width: calc(50% - 5px);
 }
 
-.add_producer .input_box.select_categorie_box,
-.add_producer .input_box.select_size_box {
+.add_product .input_box.select_categorie_box,
+.add_product .input_box.select_size_box {
     flex-direction: row;
     align-items: center;
     gap: 5px;
     padding: 20px 0 15px;
 }
 
-.add_producer .input_box.select_categorie_box .nice-select,
-.add_producer .input_box.select_size_box .nice-select {
+.add_product .input_box.select_categorie_box .nice-select,
+.add_product .input_box.select_size_box .nice-select {
 
     line-height: normal;
     height: auto;
 }
 
-.add_producer .input_box.select_categorie_box .nice-select .list,
-.add_producer .input_box.select_size_box .nice-select .list {
+.add_product .input_box.select_categorie_box .nice-select .list,
+.add_product .input_box.select_size_box .nice-select .list {
     top: calc(100% + 12px);
     right: -3px;
 }
 
 .add_category .input_box label,
-.add_producer .input_box label {
+.add_product .input_box label {
     font-size: 13px;
     font-weight: 500;
     position: relative;
 }
 
 .add_category .categorie_img label img,
-.add_producer .producer_img label img {
+.add_product .product_img label img {
     max-height: 80vw;
     margin-top: 15px;
     border-radius: 8px;
 }
 
 .add_category .categorie_img .img_show img,
-.add_producer .producer_img .img_show img {
+.add_product .product_img .img_show img {
     height: 190px;
     padding: 25px 0;
     margin: 15px 0;
@@ -504,7 +505,7 @@ button, input, a, textarea {
 }
 
 .add_category .input_box .img_show::after,
-.add_producer .input_box .img_show::after {
+.add_product .input_box .img_show::after {
     content: 'إضغط لتحميل الصورة';
     position: absolute;
     bottom: 10px;
@@ -515,8 +516,8 @@ button, input, a, textarea {
 }
 
 .add_category .input_box input,
-.add_producer .input_box input,
-.add_producer .input_box textarea {
+.add_product .input_box input,
+.add_product .input_box textarea {
     padding: 8px 10px;
     color: #eee;
     border: 1px solid #2a2a2a;
@@ -530,7 +531,7 @@ button, input, a, textarea {
 }
 
 .add_category .input_box button,
-.add_producer .input_box button {
+.add_product .input_box button {
     border: 2px solid #0fac6a33;
     color: #ddd;
     font-weight: 700;
@@ -544,7 +545,7 @@ button, input, a, textarea {
     text-shadow: 0px 0px 12px #0000004f;
 }
 
-.edit_category_box, .edit_category_sinle, .delete_category_box, .add_category_box, .add_producer_box {
+.edit_category_box, .edit_category_sinle, .delete_category_box, .add_category_box, .add_product_box {
     padding: 65px 10px 30px;
     direction: rtl;
     width: 100%;
@@ -691,6 +692,125 @@ button, input, a, textarea {
     background: linear-gradient(90deg, rgb(252, 90, 26) 0%, rgb(248, 39, 18) 100%);
     padding: 6px 30px;
     box-shadow: none;
+}
+
+.edit_product_box, .delete_product_box {
+    display: none;
+}
+
+.edit_product_box .edit_product, .delete_product_box .delete_product {
+    display: flex;
+    padding: 65px 10px 30px;
+    direction: rtl;
+    flex-wrap: wrap;
+}
+
+.order_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px -3px #1e1e1e82;
+    background: rgba(0, 0, 0, 0.051);
+    position: relative;
+    min-height: 130px;
+}
+
+
+.order_box .order_img, .order_box .order_text {
+    background-color: #202227;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.order_box .order_img {
+    padding: 10px 5px;
+    min-width: 135px;
+    width: 135px;
+    position: relative;
+    display: flex;
+    border-left: 2px dashed #36383d;
+    cursor: default;
+}
+
+
+.order_box .order_img img {
+    border-radius: 12px;
+    min-height: 110px;
+}
+
+
+.order_box .order_text {
+    font-size: 16px;
+    color: #eee;
+    padding: 10px 15px 20px 10px;
+    width: calc(100% - 135px);
+}
+
+
+.order_box .order_text .order_title {
+    font-size: 17px;
+
+}
+
+.order_box .order_text .order_details {
+    font-size: 12px;
+    margin: 5px 0 12px;
+    color: #adadad;
+    min-height: 14px;
+    overflow: hidden;
+    position: relative;
+    padding-left: 15px;
+}
+
+.order_box .order_text .order_options {
+    margin: -15px 0 0px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #adadad;
+    font-size: 14px;
+}
+
+.order_box .order_text .order_options .nice-select {
+    font-size: 13px;
+}
+
+.order_box .order_text .order_price {
+    font-size: 15px;
+}
+
+.order_box .order_text .order_price span {
+    padding: 5px;
+}
+
+.order_box .order_text .order_price span.hide {
+    display: none;
+}
+
+.order_box .order_text .order_num {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.order_box .order_text .order_num button {
+    border: 1px solid #a3a3a300;
+    color: #ddd;
+    font-weight: 700;
+    background-color: #14996300;
+    font-family: 'tajawal', 'Roboto', sans-serif;
+    padding: 4px 25px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 12px;
+    box-shadow: -3px -3px 7px -6px rgb(198 198 198 / 40%), 4px 4px 7px -2px rgb(22 22 22 / 50%);
 }
 
 .about_us_page {

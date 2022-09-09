@@ -11,8 +11,6 @@
     <link rel="apple-touch-icon" href="imgs/food.png">
     <link rel="shortcut icon" href="imgs/food.png">
     <title>Restaurante</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
-
     <link rel="stylesheet" href="css/fonts-Roboto-Tajawal.css">
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -23,7 +21,7 @@
 
     <div class="nav_bar">
         <div class="profile_box">
-            <div class="profile_pic"><img src="imgs/man.png" alt=""></div>
+            <div class="profile_pic"><img src="imgs/man.png" loading="lazy" alt=""></div>
             <div class="profile_name">admin user</div>
         </div>
         <div class="nav_links_box">
@@ -62,9 +60,9 @@
                 </div>
 
                 <div class="nav_categories">
-                    <a href="#add_producer">أضف منتج</a>
-                    <a href="#edit_producer">تعديل منتج</a>
-                    <a href="#delete_producer">حذف منتج</a>
+                    <a href="#add_product">أضف منتج</a>
+                    <a href="#edit_product">تعديل منتج</a>
+                    <a href="#delete_product">حذف منتج</a>
                 </div>
             </div>
             <a href="#about" class="nav_link">
@@ -142,8 +140,8 @@
             </div>
             <div class="input_box categorie_img">
                 <label for="categorie_img_input">صورة التصنيف</label>
-                <label class="img_show" for="categorie_img_input"><img loading="lazy"
-                        src="imgs/upload_img.png" alt=""></label>
+                <label class="img_show" for="categorie_img_input"><img loading="lazy" src="imgs/upload_img.png"
+                        alt=""></label>
                 <input hidden type="file" class="file_input" id="categorie_img_input">
             </div>
             <div class="input_box">
@@ -157,27 +155,27 @@
         </div>
         <div class="edit_category">
             <a href="#edit_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/Burgers.webp" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/Burgers.webp" loading="lazy" alt=""></div>
                 <div class="category_name">برجر</div>
             </a>
             <a href="#edit_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/pizza.jpg" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/pizza.jpg" loading="lazy" alt=""></div>
                 <div class="category_name">بيتزا</div>
             </a>
             <a href="#edit_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/crepe.jpg" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/crepe.jpg" loading="lazy" alt=""></div>
                 <div class="category_name">كريب</div>
             </a>
             <a href="#edit_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/sweat.jpeg" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/sweat.jpeg" loading="lazy" alt=""></div>
                 <div class="category_name">حلويات</div>
             </a>
             <a href="#edit_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/order1.jpg" alt=""></div>
+                <div class="category_img"><img src="imgs/order1.jpg" loading="lazy" alt=""></div>
                 <div class="category_name">عروض</div>
             </a>
             <a href="#edit_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/juice.jpg" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/juice.jpg" loading="lazy" alt=""></div>
                 <div class="category_name">مشروبات</div>
             </a>
         </div>
@@ -207,27 +205,27 @@
         </div>
         <div class="delete_category">
             <a href="#delete_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/Burgers.webp" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/Burgers.webp" loading="lazy" alt=""></div>
                 <div class="category_name">برجر</div>
             </a>
             <a href="#delete_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/pizza.jpg" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/pizza.jpg" loading="lazy" alt=""></div>
                 <div class="category_name">بيتزا</div>
             </a>
             <a href="#delete_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/crepe.jpg" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/crepe.jpg" loading="lazy" alt=""></div>
                 <div class="category_name">كريب</div>
             </a>
             <a href="#delete_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/sweat.jpeg" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/sweat.jpeg" loading="lazy" alt=""></div>
                 <div class="category_name">حلويات</div>
             </a>
             <a href="#delete_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/order1.jpg" alt=""></div>
+                <div class="category_img"><img src="imgs/order1.jpg" loading="lazy" alt=""></div>
                 <div class="category_name">عروض</div>
             </a>
             <a href="#delete_category_single" class="category_box">
-                <div class="category_img"><img src="imgs/categories/juice.jpg" alt=""></div>
+                <div class="category_img"><img src="imgs/categories/juice.jpg" loading="lazy" alt=""></div>
                 <div class="category_name">مشروبات</div>
             </a>
         </div>
@@ -246,9 +244,9 @@
             </div>
         </div>
     </div>
-    <div class="add_producer_box">
-        <div class="add_producer">
-            <div class="producer_title">أضف منتجاً جديداً</div>
+    <div class="add_product_box">
+        <div class="add_product">
+            <div class="product_title">أضف منتجاً جديداً</div>
             <div class="input_box select_categorie_box">
                 <label>إختر تصنيف المنتج : </label>
                 <select class="select_categorie">
@@ -266,84 +264,298 @@
                 </select>
             </div>
             <div class="input_box">
-                <label for="producer_name_input">إسم المنتج</label>
-                <input type="text" id="producer_name_input" placeholder="اضف اسم المنتج هنا ...">
+                <label for="product_name_input">إسم المنتج</label>
+                <input type="text" id="product_name_input" placeholder="اضف اسم المنتج هنا ...">
             </div>
-            <div class="input_box producer_price ">
-                <label for="producer_price_input">سعر المنتج</label>
-                <input type="number" id="producer_price_input" placeholder="اضف سعر المنتج هنا ...">
-            </div>
-            <div class="product_size_price_box">
-                <div class="input_box">
-                    <label for="producer_size_input1">حجم المنتج</label>
-                    <input type="text" id="producer_size_input1" placeholder="اضف حجم المنتج هنا ...">
-                </div>
-                <div class="input_box">
-                    <label for="producer_price_input1">سعره</label>
-                    <input type="number" id="producer_price_input1" placeholder="اضف سعر المنتج هنا ...">
-                </div>
+            <div class="input_box product_price ">
+                <label for="product_price_input">سعر المنتج</label>
+                <input type="number" id="product_price_input" placeholder="اضف سعر المنتج هنا ...">
             </div>
             <div class="product_size_price_box">
                 <div class="input_box">
-                    <label for="producer_size_input2">حجم المنتج</label>
-                    <input type="text" id="producer_size_input2" placeholder="اضف حجم المنتج هنا ...">
+                    <label for="product_size_input1">حجم المنتج</label>
+                    <input type="text" id="product_size_input1" placeholder="اضف حجم المنتج هنا ...">
                 </div>
                 <div class="input_box">
-                    <label for="producer_price_input2">سعره</label>
-                    <input type="number" id="producer_price_input2" placeholder="اضف سعر المنتج هنا ...">
+                    <label for="product_price_input1">سعره</label>
+                    <input type="number" id="product_price_input1" placeholder="اضف سعر المنتج هنا ...">
                 </div>
             </div>
             <div class="product_size_price_box">
                 <div class="input_box">
-                    <label for="producer_size_input3">حجم المنتج</label>
-                    <input type="text" id="producer_size_input3" placeholder="اضف حجم المنتج هنا ...">
+                    <label for="product_size_input2">حجم المنتج</label>
+                    <input type="text" id="product_size_input2" placeholder="اضف حجم المنتج هنا ...">
                 </div>
                 <div class="input_box">
-                    <label for="producer_price_input3">سعره</label>
-                    <input type="number" id="producer_price_input3" placeholder="اضف سعر المنتج هنا ...">
+                    <label for="product_price_input2">سعره</label>
+                    <input type="number" id="product_price_input2" placeholder="اضف سعر المنتج هنا ...">
                 </div>
             </div>
             <div class="product_size_price_box">
                 <div class="input_box">
-                    <label for="producer_size_input4">حجم المنتج</label>
-                    <input type="text" id="producer_size_input4" placeholder="اضف حجم المنتج هنا ...">
+                    <label for="product_size_input3">حجم المنتج</label>
+                    <input type="text" id="product_size_input3" placeholder="اضف حجم المنتج هنا ...">
                 </div>
                 <div class="input_box">
-                    <label for="producer_price_input4">سعره</label>
-                    <input type="number" id="producer_price_input4" placeholder="اضف سعر المنتج هنا ...">
+                    <label for="product_price_input3">سعره</label>
+                    <input type="number" id="product_price_input3" placeholder="اضف سعر المنتج هنا ...">
                 </div>
             </div>
             <div class="product_size_price_box">
                 <div class="input_box">
-                    <label for="producer_size_input5">حجم المنتج</label>
-                    <input type="text" id="producer_size_input5" placeholder="اضف حجم المنتج هنا ...">
+                    <label for="product_size_input4">حجم المنتج</label>
+                    <input type="text" id="product_size_input4" placeholder="اضف حجم المنتج هنا ...">
                 </div>
                 <div class="input_box">
-                    <label for="producer_price_input5">سعره</label>
-                    <input type="number" id="producer_price_input5" placeholder="اضف سعر المنتج هنا ...">
+                    <label for="product_price_input4">سعره</label>
+                    <input type="number" id="product_price_input4" placeholder="اضف سعر المنتج هنا ...">
                 </div>
             </div>
-            <div class="input_box producer_img">
-                <label for="producer_img_input">صورة المنتج</label>
-                <label class="img_show" for="producer_img_input"><img loading="lazy" src="imgs/upload_img.png"
+            <div class="product_size_price_box">
+                <div class="input_box">
+                    <label for="product_size_input5">حجم المنتج</label>
+                    <input type="text" id="product_size_input5" placeholder="اضف حجم المنتج هنا ...">
+                </div>
+                <div class="input_box">
+                    <label for="product_price_input5">سعره</label>
+                    <input type="number" id="product_price_input5" placeholder="اضف سعر المنتج هنا ...">
+                </div>
+            </div>
+            <div class="input_box product_img">
+                <label for="product_img_input">صورة المنتج</label>
+                <label class="img_show" for="product_img_input"><img loading="lazy" src="imgs/upload_img.png"
                         alt=""></label>
-                <input hidden type="file" class="file_input" id="producer_img_input">
+                <input hidden type="file" class="file_input" id="product_img_input">
             </div>
             <div class="input_box">
-                <label for="producer_details_input">وصف المنتج</label>
-                <textarea id="producer_details_input" placeholder="اضف وصف المنتج هنا ..." rows="6"></textarea>
+                <label for="product_details_input">وصف المنتج</label>
+                <textarea id="product_details_input" placeholder="اضف وصف المنتج هنا ..." rows="6"></textarea>
             </div>
             <div class="input_box">
                 <button>إضافة</button>
             </div>
         </div>
     </div>
+    <div class="edit_product_box">
+        <div class="edit_product">
+            <div class="order_box">
+                <div class="order_img">
+                    <img class="order_img_sm" loading="lazy" src="imgs/orders/burger1sm.jpg" alt="">
+                </div>
+                <div class="order_text">
+                    <div class="order_title">جلادياتور</div>
+                    <div class="order_details">برجر لحم مشوى، صوص باربيكيو مدخن، بيف بيكون، أوراق جرجير، خس،
+                        خيار مخلل، جبنة إيمنتال و شيدر، صوص داديز وصوص مشروم</div>
+                    <div class="order_options">
+                        اختر الحجم :
+                        <select>
+                            <option value="1" price_val="0" selected>150 جم</option>
+                            <option value="2" price_val="0">200 جم</option>
+                        </select>
+                    </div>
+                    <div class="order_price">
+                        <span>95</span>
+                        <span class="hide">110</span>
+                        جنيه
+                    </div>
+                    <div class="order_num">
+                        <button>تعديل</button>
+                    </div>
+                </div>
+            </div>
+            <div class="order_box">
+                <div class="order_img">
+                    <img class="order_img_sm" loading="lazy" src="imgs/orders/burger2sm.jpg" alt="">
+                </div>
+                <div class="order_text">
+                    <div class="order_title">داديز شرومس</div>
+                    <div class="order_details">برجر لحم مشوى، صوص داديز، خس، جبنة امنتال، صوص مشروم وبصل
+                        مكرمل
+                    </div>
+                    <div class="order_options">
+                        اختر الحجم :
+                        <select>
+                            <option value="1" price_val="0" selected>150 جم</option>
+                            <option value="2" price_val="0">200 جم</option>
+                        </select>
+                    </div>
+                    <div class="order_price">
+                        <span>75</span>
+                        <span class="hide">90</span>
+                        جنيه
+                    </div>
+                    <div class="order_num">
+                        <button>تعديل</button>
+                    </div>
+                </div>
+            </div>
+            <div class="order_box">
+                <div class="order_img">
+                    <img class="order_img_sm" loading="lazy" src="imgs/orders/burger3sm.jpg" alt="">
+                </div>
+                <div class="order_text">
+                    <div class="order_title">بافلو دجاج حار</div>
+                    <div class="order_details">صدر دجاج مقلي، صوص بافلو، خس، خيار مخلل، صوص داديز وصوص رانش
+                    </div>
+                    <div class="order_options">
+                        اختر الحجم :
+                        <select>
+                            <option value="1" price_val="0" selected>سينجل</option>
+                            <option value="2" price_val="0">دوبل</option>
+                        </select>
+                    </div>
+                    <div class="order_price">
+                        <span>75</span>
+                        <span class="hide">100</span>
+                        جنيه
+                    </div>
+                    <div class="order_num">
+                        <button>تعديل</button>
+                    </div>
+                </div>
+            </div>
+            <div class="order_box">
+                <div class="order_img">
+                    <img class="order_img_sm" loading="lazy" src="imgs/orders/burger4sm.jpg" alt="">
+                </div>
+                <div class="order_text">
+                    <div class="order_title">ميلانو</div>
+                    <div class="order_details">برجر لحم مشوى، سلامى مشوى، اصابع موتزاريلا مقلية، طماطم، خس،
+                        صوص
+                        بيستو وجرجير
+                    </div>
+                    <div class="order_options">
+                        اختر الحجم :
+                        <select>
+                            <option value="1" price_val="0" selected>150 جم</option>
+                            <option value="2" price_val="0">200 جم</option>
+                        </select>
+                    </div>
+                    <div class="order_price">
+                        <span>85</span>
+                        <span class="hide">100</span>
+                        جنيه
+                    </div>
+                    <div class="order_num">
+                        <button>تعديل</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="delete_product_box">
+        <div class="delete_product">
+            <div class="order_box">
+                <div class="order_img">
+                    <img class="order_img_sm" loading="lazy" src="imgs/orders/burger1sm.jpg" alt="">
+                </div>
+                <div class="order_text">
+                    <div class="order_title">جلادياتور</div>
+                    <div class="order_details">برجر لحم مشوى، صوص باربيكيو مدخن، بيف بيكون، أوراق جرجير، خس،
+                        خيار مخلل، جبنة إيمنتال و شيدر، صوص داديز وصوص مشروم</div>
+                    <div class="order_options">
+                        اختر الحجم :
+                        <select>
+                            <option value="1" price_val="0" selected>150 جم</option>
+                            <option value="2" price_val="0">200 جم</option>
+                        </select>
+                    </div>
+                    <div class="order_price">
+                        <span>95</span>
+                        <span class="hide">110</span>
+                        جنيه
+                    </div>
+                    <div class="order_num">
+                        <button>حذف</button>
+                    </div>
+                </div>
+            </div>
+            <div class="order_box">
+                <div class="order_img">
+                    <img class="order_img_sm" loading="lazy" src="imgs/orders/burger2sm.jpg" alt="">
+                </div>
+                <div class="order_text">
+                    <div class="order_title">داديز شرومس</div>
+                    <div class="order_details">برجر لحم مشوى، صوص داديز، خس، جبنة امنتال، صوص مشروم وبصل
+                        مكرمل
+                    </div>
+                    <div class="order_options">
+                        اختر الحجم :
+                        <select>
+                            <option value="1" price_val="0" selected>150 جم</option>
+                            <option value="2" price_val="0">200 جم</option>
+                        </select>
+                    </div>
+                    <div class="order_price">
+                        <span>75</span>
+                        <span class="hide">90</span>
+                        جنيه
+                    </div>
+                    <div class="order_num">
+                        <button>حذف</button>
+                    </div>
+                </div>
+            </div>
+            <div class="order_box">
+                <div class="order_img">
+                    <img class="order_img_sm" loading="lazy" src="imgs/orders/burger3sm.jpg" alt="">
+                </div>
+                <div class="order_text">
+                    <div class="order_title">بافلو دجاج حار</div>
+                    <div class="order_details">صدر دجاج مقلي، صوص بافلو، خس، خيار مخلل، صوص داديز وصوص رانش
+                    </div>
+                    <div class="order_options">
+                        اختر الحجم :
+                        <select>
+                            <option value="1" price_val="0" selected>سينجل</option>
+                            <option value="2" price_val="0">دوبل</option>
+                        </select>
+                    </div>
+                    <div class="order_price">
+                        <span>75</span>
+                        <span class="hide">100</span>
+                        جنيه
+                    </div>
+                    <div class="order_num">
+                        <button>حذف</button>
+                    </div>
+                </div>
+            </div>
+            <div class="order_box">
+                <div class="order_img">
+                    <img class="order_img_sm" loading="lazy" src="imgs/orders/burger4sm.jpg" alt="">
+                </div>
+                <div class="order_text">
+                    <div class="order_title">ميلانو</div>
+                    <div class="order_details">برجر لحم مشوى، سلامى مشوى، اصابع موتزاريلا مقلية، طماطم، خس،
+                        صوص
+                        بيستو وجرجير
+                    </div>
+                    <div class="order_options">
+                        اختر الحجم :
+                        <select>
+                            <option value="1" price_val="0" selected>150 جم</option>
+                            <option value="2" price_val="0">200 جم</option>
+                        </select>
+                    </div>
+                    <div class="order_price">
+                        <span>85</span>
+                        <span class="hide">100</span>
+                        جنيه
+                    </div>
+                    <div class="order_num">
+                        <button>حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="about_us_page">
         <div class="about_us_cover">
             <img class="img_cover" src="https://705restaurante.com.br/wp-content/uploads/restaurante-705-img2.jpg"
-                alt="">
+                loading="lazy" alt="">
             <div class="about_us_img">
-                <img src="imgs/logo.png" alt="">
+                <img src="imgs/logo.png" loading="lazy" alt="">
             </div>
         </div>
         <div class="restaurante_name">
@@ -406,7 +618,7 @@
                             label: 'الدخل اليومي',
                             backgroundColor: gradientBkgrd,
                             borderColor: gradientStroke,
-                            data: [1200, 1450, 1300, 1350, 1500, 1550, 1600],
+                            data: [1350, 1450, 1300, 1350, 1500, 1550, 1600],
                             pointBackgroundColor: gradientStroke,
                             pointBorderColor: "rgba(255,255,255,0)",
                             pointHoverBorderColor: "rgba(220,220,220,1)",
@@ -456,7 +668,9 @@
                             },
                             grid: {
                                 color: '#7771'
-                            }
+                            },
+                            suggestedMin: 1200,
+                            suggestedMax: 1700
                         },
 
                     },
@@ -553,20 +767,19 @@
         })
 
         $('.product_size_price_box').hide()
-        $('.add_producer .product_size_price_box').addClass('show')
+        $('.add_product .product_size_price_box').addClass('show')
         var size_num
-        $('.add_producer .input_box.select_size_box .select_size_num').change(function () {
-            size_num = $('.add_producer .input_box.select_size_box .nice-select .list .selected').attr('data-value')
+        $('.add_product .input_box.select_size_box .select_size_num').change(function () {
+            size_num = $('.add_product .input_box.select_size_box .nice-select .list .selected').attr('data-value')
             if (size_num == 0) {
-                $('.producer_price').show()
+                $('.product_price').show()
                 $('.product_size_price_box').hide()
             } else {
-                $('.producer_price').hide()
+                $('.product_price').hide()
                 $('.product_size_price_box').hide()
-                $('.add_producer .product_size_price_box').slice(0, size_num).show();
+                $('.add_product .product_size_price_box').slice(0, size_num).show();
             }
         })
-
     </script>
 
 </body>
