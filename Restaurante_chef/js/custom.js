@@ -38,13 +38,11 @@ document.getElementById("cover").addEventListener('touchmove', function (e) {
 if (window.history && window.history.pushState) {
     $(window).on('popstate', function () {
         if (window.location.hash == "") {
-            $('.admin_statistics').show()
             $('.page_name').text('الرئيسية')
         } else if (window.location.hash == "#home") {
-            $('.admin_statistics').show()
             $('.page_name').text('الرئيسية')
         } else {
-            $('.admin_statistics').hide()
+
         }
     });
-}   
+}
