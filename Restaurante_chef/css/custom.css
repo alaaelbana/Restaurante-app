@@ -243,6 +243,16 @@ button, input, a, textarea {
     transform: translateY(1px);
 }
 
+.cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 199;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
 .receive_orders_box {
     padding: 65px 15px 30px;
     direction: rtl;
@@ -254,18 +264,20 @@ button, input, a, textarea {
     box-shadow: 0 0 13px -3px rgb(23 23 23 / 51%);
     background-color: #202227;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .receive_orders_box .full_order_box .customer_details_box {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 0 5px;
+    gap: 15px;
+    padding: 0 10px;
+    position: relative;
 }
 
 .receive_orders_box .full_order_box .customer_details_box .customer_details .customer_name {
-    font-size: 16px;
-    margin-bottom: 3px;
+    font-size: 15px;
+    margin-bottom: 2px;
     font-weight: 700;
 }
 
@@ -278,13 +290,13 @@ button, input, a, textarea {
 }
 
 .receive_orders_box .full_order_box .customer_details_box .customer_details .order_time span {
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .receive_orders_box .full_order_box .customer_details_box .customer_img {
-    width: 65px;
-    height: 65px;
-    border-radius: 10px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
     overflow: hidden;
 
 }
@@ -293,8 +305,23 @@ button, input, a, textarea {
     height: 100%;
 }
 
+.receive_orders_box .full_order_box .customer_details_box .order_options {
+    position: absolute;
+    left: 10px;
+    padding: 15px;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .order_options .dots {
+    width: 3.5px;
+    height: 3.5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 7px 0px 0px #fff, -7px 0px 0px #fff;
+}
+
 .receive_orders_box .full_order_box .order_details_box {
-    padding: 15px 0 0 0;
+    padding: 5px 0 0 0;
 }
 
 .receive_orders_box .full_order_box .order_details_box .order_details {
@@ -302,7 +329,8 @@ button, input, a, textarea {
     align-items: center;
     gap: 10px;
     padding: 8px 10px;
-    border-top: 1px solid #2a2a2a;
+    margin: 15px 7px;
+    box-shadow: -2px -2px 6px -6px rgb(255 255 255 / 40%), 3px 3px 6px -3px rgb(0 0 0 / 40%);
 }
 
 
@@ -332,12 +360,51 @@ button, input, a, textarea {
     text-align: center;
 }
 
-.cover {
+.receive_orders_box .full_order_box .customer_note_box {
+    padding: 10px 15px 10px;
+    border-top: 1px solid #2a2a2a;
+    box-shadow: -3px -3px 5px -6px rgb(255 255 255 / 40%), 1px 2px 8px -3px rgb(0 0 0 / 40%);
+    margin: 14px 7px;
+}
+
+.receive_orders_box .full_order_box .customer_note_box .note_title {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.receive_orders_box .full_order_box .customer_note_box .note_text {
+    padding: 5px 0;
+    text-align: center;
+    color: #eee;
+}
+
+
+
+.receive_orders_box .full_order_box .order_btns_box {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5px 10px 0;
+    gap: 15px;
+}
+
+.receive_orders_box .full_order_box .order_btns_box div {
+    width: 50%;
+}
+
+.receive_orders_box .full_order_box .order_btns_box div button {
     width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 199;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.22);
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'tajawal', 'Roboto', sans-serif;
+    padding: 8px 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #ff6161;
+    box-shadow: -3px -2px 6px -6px rgb(255 255 255 / 40%), 4px 4px 8px -2px rgb(0 0 0 / 40%);
+}
+
+.receive_orders_box .full_order_box .order_btns_box .order_done button {
+    color: #50e48e;
 }
