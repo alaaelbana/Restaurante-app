@@ -616,17 +616,17 @@
         <div class="show_order_box " dir="rtl">
             <div class="show_order"></div>
             <div class="order_btns">
-                <div class="add_note">
-                    <span class="material-icons-outlined">
-                        info
-                    </span>
-                    أضف ملحوظة
-                </div>
                 <div class="delete_order" onclick="history.back()">
                     <span class="material-icons-outlined">
                         delete
                     </span>
                     حذف الطلب
+                </div>
+                <div class="add_note">
+                    <span class="material-icons-outlined">
+                        info
+                    </span>
+                    أضف ملحوظة
                 </div>
                 <div class="send_order">
                     <span class="material-icons-outlined">
@@ -634,6 +634,14 @@
                     </span>
                     أرسل الطلب
                 </div>
+            </div>
+        </div>
+        <div class="add_note_box">
+            <div class="add_note_title">أضف ملحوظة للطاهي</div>
+            <div class="add_note_input"><textarea name="" id="" placeholder="أضف ملحوظة هنا ..." cols="30"
+                    rows="10"></textarea></div>
+            <div class="add_note_btn">
+                <button>حفظ</button>
             </div>
         </div>
         <div class="about_us_page">
@@ -680,7 +688,7 @@
     <script>
         $(document).ready(function () {
             $('select').niceSelect();
-        });    
+        });
     </script>
 </body>
 

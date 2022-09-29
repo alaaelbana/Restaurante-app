@@ -26,9 +26,15 @@ mySwiper = new Swiper('.swiper-container', {
 });
 
 function page_hash() {
-    setTimeout(() => {
-        window.location.hash = $('.swiper-pagination-bullet-active').attr('name')
-    }, 50);
+    $('.swiper-slide:not(.swiper-slide-active) .order_page').fadeIn()
+    $('.swiper-slide-active .order_page').fadeOut()
+    $('.page_name').text('قائمة الطعام')
+    $('.order_box').removeClass('order_box_large show')
+    $('.order_box').css("margin-top", '0');
+    $('.order_box .order_img').each(function () {
+        img_sm = $(this).find('.order_img_sm').attr('src-data-sm');
+        $(this).find('.order_img_sm').attr('src', img_sm);
+    })
 }
 $('.swiper-slide .order_page').hide()
 var idleTime = 0;
@@ -357,16 +363,14 @@ if (window.history && window.history.pushState) {
                 $('.swiper-pagination-bullet:nth-child(' + [i + 1] + ')').click()
                 $('.swiper-slide:not(.swiper-slide-active) .order_page').fadeOut()
                 $('.swiper-slide-active .order_page').fadeIn()
-                $('.swiper-slide-active .order_box .order_img').each(function () {
-                    img_sm = $(this).find('.order_img_sm').attr('src-data-sm');
-                    $(this).find('.order_img_sm').attr('src', img_sm);
-                })
                 $('.page_name').text('قائمة الطعام')
             }
         }
 
         if (window.location.hash == "#single_order") {
             $('.page_name').text('قائمة الطعام')
+            $('.swiper-slide:not(.swiper-slide-active) .order_page').fadeOut()
+            $('.swiper-slide-active .order_page').fadeIn()
         } else {
             $('.order_box').removeClass('order_box_large show')
             $('.order_box').css("margin-top", '0');

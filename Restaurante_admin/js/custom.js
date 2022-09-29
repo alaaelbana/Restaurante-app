@@ -1,3 +1,28 @@
+var menu = ['الطلبات الملغية', 'الطلبات الغير مدفوعة'];
+var mySwiper
+mySwiper = new Swiper('.swiper-container', {
+    // If we need pagination
+    activeIndex: 2,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<div class="' + className + '"><span>' + menu[index] + '</span></div>';
+        }
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    on: {
+        'slideChange': function () {
+            $('.swiper-slide:not(.swiper-slide-active) .receive_orders_box .full_order_box').fadeIn()
+            $('.swiper-slide-active .receive_orders_box .full_order_box').fadeOut()
+        },
+    },
+});
+
 $('.categories_link').click(function () {
     $(this).parent().find('.nav_categories').slideToggle()
     $(this).find('.expand_more').toggleClass('rotat')
@@ -14,7 +39,7 @@ $('.menu_btn').click(function () {
     }, 10);
     $('.cover').fadeToggle()
 })
-$('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories').click(function () {
+$('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories a').click(function () {
     $('.nav_categories').slideUp()
     if (window.location.hash == "#delete_category_single") {
         history.back()
@@ -115,6 +140,51 @@ if (window.history && window.history.pushState) {
             $('.page_name').text('حذف منتج')
         } else {
             $('.delete_product_box').hide()
+        }
+
+        if (window.location.hash == "#orders") {
+            $('.receive_orders_box').show()
+            $('.page_name').text('الطلبات')
+        } else {
+            $('.receive_orders_box').hide()
+        }
+
+        if (window.location.hash == "#customer_page") {
+            $('.acounts_page').show()
+            $('.acounts_box').hide()
+            $('.customer_page').show()
+            $('.page_name').text('حسابات العملاء')
+        } else if (window.location.hash == "#chef_page") {
+            $('.acounts_page').show()
+            $('.acounts_box').hide()
+            $('.chef_page').show()
+            $('.page_name').text('حسابات الطهاه')
+        } else if (window.location.hash == "#waiter_page") {
+            $('.acounts_page').show()
+            $('.acounts_box').hide()
+            $('.waiter_page').show()
+            $('.page_name').text('حسابات النادل')
+        } else if (window.location.hash == "#casher_page") {
+            $('.acounts_page').show()
+            $('.acounts_box').hide()
+            $('.casher_page').show()
+            $('.page_name').text('حساب الكشير')
+        } else if (window.location.hash == "#all_page") {
+            $('.acounts_page').show()
+            $('.acounts_box').hide()
+            $('.all_page').show()
+            $('.page_name').text('الحساب الشامل')
+        } else {
+            $('.acounts_page').hide()
+            $('.acounts_box').hide()
+        }
+
+        if (window.location.hash == "#new_acount") {
+            $('.new_acc_page').show()
+            $('.page_name').text('إنشاء حساب جديد')
+
+        } else {
+            $('.new_acc_page').hide()
         }
     });
 }

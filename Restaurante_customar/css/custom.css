@@ -719,15 +719,13 @@ button, input, a, textarea {
 }
 
 .show_order_box .delete_order {
-    margin-right: 2%;
-    color: #ff6161;
-    text-shadow: -1px -1px 3px rgba(255, 255, 255, 0.2), 1px 1px 7px #000000bf;
+    margin-left: 2%;
+    color: #e85353;
 }
 
 .show_order_box .add_note {
-    margin-left: 2%;
-    color: #429bf4;
-    text-shadow: -1px -1px 5px rgba(255, 255, 255, 0.2), 1px 1px 7px #000000bf;
+    margin-right: 2%;
+    color: #388bdd;
 }
 
 .show_order_box .add_note span {
@@ -766,6 +764,57 @@ button, input, a, textarea {
 .order_total_price span i {
     font-size: 19px;
     color: #16b316;
+}
+
+.add_note_box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    background-color: #272a2f;
+    box-shadow: 0 0 18px -3px #1e1e1ebe;
+    direction: rtl;
+    padding: 25px 15px;
+    width: calc(100% - 25px);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.add_note_box .add_note_title {
+    font-size: 18px;
+}
+
+.add_note_box .add_note_input {
+    margin: 15px 0;
+}
+
+.add_note_box .add_note_input textarea {
+    padding: 8px 10px;
+    color: #eee;
+    border: 1px solid #444;
+    background-color: transparent;
+    font-family: 'tajawal', 'Roboto', sans-serif;
+    margin-top: 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.add_note_box .add_note_btn button {
+    border: 2px solid #0fac6a33;
+    color: #ddd;
+    font-weight: 700;
+    background-color: #149963;
+    font-family: 'tajawal', 'Roboto', sans-serif;
+    padding: 7px 10px;
+    border-radius: 5px;
+    width: 52%;
+    margin: 15px auto 0;
+    box-shadow: -3px -3px 7px -6px rgba(255, 255, 255, 0.15), 4px 4px 7px -2px rgba(0, 0, 0, 0.15);
+    text-shadow: 0px 0px 12px #0000004f;
+    margin-bottom: 5px;
 }
 
 .about_us_page {

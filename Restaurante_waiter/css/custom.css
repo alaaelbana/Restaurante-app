@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'tajawal', sans-serif;
+    font-weight: 500;
+    background: linear-gradient(180deg, rgb(30 31 36) 0%, rgb(24 27 29) 100%);
+    font-size: 14px;
+    color: #fff;
+    user-select: none;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button, input, a, textarea {
+    outline: none;
+}
+
+.input_num[type=number]::-webkit-inner-spin-button,
+.input_num[type=number]::-webkit-outer-spin-button {
+    display: none;
+}
+
+.material-icons, .material-icons-two-tone, .material-icons-sharp, .material-icons-round, .material-icons-outlined {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons Outlined';
+}
+
+.material-icons-round {
+    font-family: 'Material Icons Round';
+}
+
+.material-icons-sharp {
+    font-family: 'Material Icons Sharp';
+}
+
+.material-icons-two-tone {
+    font-family: 'Material Icons Two Tone';
+}
+
+
+.nice-select {
+    background: transparent;
+    direction: rtl;
+    border: none;
+    padding: 0 5px 0 20px;
+    font-weight: 700;
+}
+
+.nice-select span {
+    color: #fff;
+}
+
+.nice-select:after {
+    right: auto;
+    left: 0px;
+}
+
+.nice-select .list {
+    background-color: #22242b;
+    left: auto;
+    right: -5px;
+    margin-top: -4px;
+    box-shadow: 0px 0px 11px -3px #22222291;
+}
+
+.nice-select .option {
+    text-align: right;
+    padding: 0 10px 0 0px;
+    min-width: 140px;
+    color: #ddd;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus {
+    background-color: #272a2f;
+}
+
+.nice-select .option.selected,
+.nice-select .option.focus {
+    display: none;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 110;
+    font-size: 16px;
+    align-items: center;
+    background: #1d1f23;
+}
+
+.header.hide {
+    display: none;
+}
+
+.header .header_btn {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+}
+
+.header .back_btn .header_btn {
+    font-size: 18px;
+    cursor: default;
+    color: #fff;
+}
+
+.header .back_btn .header_btn::after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    right: 18px;
+}
+
+.nav_bar {
+    transition: 0.5s;
+    position: fixed;
+    right: -280px;
+    z-index: 999;
+    width: 280px;
+    top: 0;
+    padding: 20px;
+    height: 100vh;
+    overflow: auto;
+    direction: rtl;
+    font-size: 16px;
+    display: none;
+    background: linear-gradient(180deg, rgb(30 31 36) 0%, rgb(25 28 30) 100%);
+}
+
+.nav_bar.nav_show {
+    right: 0;
+}
+
+.nav_bar .profile_box {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.nav_bar .profile_box .profile_pic {
+    padding: 50px 60px 15px;
+}
+
+.nav_bar .profile_box .profile_pic img {
+    border-radius: 50%;
+}
+
+.nav_bar .nav_links_box .nav_link {
+    display: flex;
+    column-gap: 8px;
+    padding: 10px 0;
+    cursor: default;
+    color: #fff;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.nav_bar .nav_links_box .nav_link.categories_link_box {
+    padding: 0 0 5px;
+}
+
+.nav_bar .nav_links_box .nav_link .categories_link {
+    display: flex;
+    gap: 8px;
+    padding: 10px 0 5px;
+    width: 100%;
+}
+
+.nav_bar .nav_links_box .nav_link .categories_link .expand_more {
+    position: absolute;
+    left: 5px;
+    transition: .5s transform;
+}
+
+.nav_bar .nav_links_box .nav_link .categories_link .expand_more.rotat {
+    transform: rotate(-180deg);
+}
+
+.nav_bar .nav_links_box .nav_link .nav_categories {
+    width: 100%;
+    padding: 0px 15px;
+    display: none;
+}
+
+.nav_bar .nav_links_box .nav_link .nav_categories a {
+    width: 100%;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 4px 15px 8px;
+    margin: 5px 0;
+    border-bottom: 1px solid #323132;
+}
+
+.nav_bar .nav_links_box .nav_link .nav_categories a:first-child {
+    border-top: 1px solid #323132;
+}
+
+.nav_bar .nav_links_box .nav_link span {
+    font-size: 21px;
+    transform: translateY(1px);
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 199;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
+.receive_orders_box {
+    padding: 65px 15px 30px;
+    direction: rtl;
+    width: 100%;
+}
+
+.receive_orders_box .full_order_box {
+    padding: 10px 0 10px 0px;
+    box-shadow: 0 0 13px -3px rgb(23 23 23 / 51%);
+    background-color: #202227;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.receive_orders_box .full_order_box .customer_details_box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+    position: relative;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .customer_details .customer_name {
+    font-size: 15px;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .customer_details .order_time {
+    align-items: center;
+    display: flex;
+    gap: 3px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .customer_details .order_time span {
+    font-size: 13px;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .customer_img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    overflow: hidden;
+
+}
+
+.receive_orders_box .full_order_box .customer_details_box .customer_img img {
+    height: 100%;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .order_options {
+    position: absolute;
+    left: 10px;
+    padding: 15px;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .order_options .dots {
+    width: 3.5px;
+    height: 3.5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 7px 0px 0px #fff, -7px 0px 0px #fff;
+}
+
+.receive_orders_box .full_order_box .order_details_box {
+    padding: 5px 0 0 0;
+}
+
+.receive_orders_box .full_order_box .order_details_box .order_details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    margin: 15px 7px;
+    box-shadow: -2px -2px 6px -6px rgb(255 255 255 / 40%), 3px 3px 6px -3px rgb(0 0 0 / 40%);
+}
+
+
+.receive_orders_box .full_order_box .order_details_box .order_details .order_img {
+    width: 50px;
+    height: 30px;
+}
+
+.receive_orders_box .full_order_box .order_details_box .order_details .order_img img {
+    border-radius: 8px;
+    object-fit: contain;
+    height: 100%;
+}
+
+.receive_orders_box .full_order_box .order_details_box .order_details .order_num {
+    width: 15%;
+    text-align: center;
+}
+
+.receive_orders_box .full_order_box .order_details_box .order_details .order_name {
+    width: calc(60% - 50px);
+    text-align: center;
+}
+
+.receive_orders_box .full_order_box .order_details_box .order_details .order_size {
+    width: 25%;
+    text-align: center;
+}
+
+.receive_orders_box .full_order_box .customer_note_box {
+    padding: 10px 15px 10px;
+    border-top: 1px solid #2a2a2a;
+    box-shadow: -3px -3px 5px -6px rgb(255 255 255 / 40%), 1px 2px 8px -3px rgb(0 0 0 / 40%);
+    margin: 14px 7px;
+}
+
+.receive_orders_box .full_order_box .customer_note_box .note_title {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.receive_orders_box .full_order_box .customer_note_box .note_text {
+    padding: 5px 0;
+    text-align: center;
+    color: #eee;
+}
+
+
+
+.receive_orders_box .full_order_box .order_btns_box {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5px 10px 0;
+    gap: 15px;
+}
+
+.receive_orders_box .full_order_box .order_btns_box div {
+    width: 100%;
+}
+
+.receive_orders_box .full_order_box .order_btns_box div button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'tajawal', 'Roboto', sans-serif;
+    padding: 8px 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #ff6161;
+    box-shadow: -3px -2px 6px -6px rgb(255 255 255 / 40%), 4px 4px 8px -2px rgb(0 0 0 / 40%);
+}
+
+.receive_orders_box .full_order_box .order_btns_box .order_done button {
+    color: #50e48e;
+}

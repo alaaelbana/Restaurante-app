@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="imgs/food.png">
     <title>Restaurante</title>
     <link rel="stylesheet" href="css/fonts-Roboto-Tajawal.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/custom.css">
 
@@ -65,6 +66,31 @@
                     <a href="#delete_product">حذف منتج</a>
                 </div>
             </div>
+            <a href="#orders" class="nav_link">
+                <span class="material-icons-outlined">
+                    restaurant
+                </span>
+                الطلبات
+            </a>
+            <div class="nav_link categories_link_box">
+                <div class="categories_link">
+                    <span class="material-icons-outlined">
+                        manage_accounts
+                    </span>
+                    الحسابات
+                    <span class="material-icons-outlined expand_more">
+                        expand_more
+                    </span>
+                </div>
+
+                <div class="nav_categories">
+                    <a href="#customer_page">حسابات العملاء</a>
+                    <a href="#chef_page">حسابات الطهاه</a>
+                    <a href="#waiter_page">حسابات النادل</a>
+                    <a href="#casher_page">حساب الكشير</a>
+                    <a href="#all_page">الحساب الشامل</a>
+                </div>
+            </div>
             <a href="#about" class="nav_link">
                 <span class="material-icons-outlined">
                     groups
@@ -99,6 +125,36 @@
         </div>
     </header>
     <div class="admin_statistics">
+        <div class="carts_box">
+            <a class="cart_single">
+                <div class="cart_img"><img src="imgs/order.png" alt=""></div>
+                <div class="cart_num_box">
+                    <div class="cart_num">150</div>
+                    <div class="cart_title">طلب جديد</div>
+                </div>
+            </a>
+            <a href="#orders" class="cart_single">
+                <div class="cart_img"><img src="imgs/order2.png" alt=""></div>
+                <div class="cart_num_box">
+                    <div class="cart_num">5</div>
+                    <div class="cart_title">طلب ملغي</div>
+                </div>
+            </a>
+            <a href="#orders" class="cart_single">
+                <div class="cart_img"><img src="imgs/no_money.png" alt=""></div>
+                <div class="cart_num_box">
+                    <div class="cart_num">0</div>
+                    <div class="cart_title">طلب غير مدفوع</div>
+                </div>
+            </a>
+            <a class="cart_single">
+                <div class="cart_img"><img src="imgs/money.png" alt=""></div>
+                <div class="cart_num_box">
+                    <div class="cart_num">1500 جـ</div>
+                    <div class="cart_title">دخل اليوم</div>
+                </div>
+            </a>
+        </div>
         <div class="income_chart_box">
             <div class="income_title">
                 الدخل
@@ -550,6 +606,626 @@
             </div>
         </div>
     </div>
+    <div class="orders_page swiper-container" dir="rtl">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="receive_orders_box not_paid_orders">
+                    <div class="full_order_box">
+                        <div class="customer_details_box">
+                            <div class="customer_img">
+                                <img src="imgs/categories/crepe.jpg" loading="lazy" alt="">
+                            </div>
+                            <div class="customer_details">
+                                <div class="customer_name">طاولة 1</div>
+                                <div class="order_time">
+                                    <span class="material-icons-outlined">
+                                        schedule
+                                    </span>
+                                    منذ 5 دقائق
+                                </div>
+                            </div>
+                            <div class="order_options">
+                                <span class="dots"></span>
+                            </div>
+                        </div>
+                        <div class="order_details_box">
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">2</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">150 جرام</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">200 جرام</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/crepe2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">تشيكن رانش</div>
+                                <div class="order_size">عادي</div>
+                            </div>
+                        </div>
+                        <div class="customer_note_box">
+                            <div class="note_title">ملحوظة :</div>
+                            <div class="note_text">زود كاتشب ، ومتحطش ورق عنب عشان مبحبهوش</div>
+                        </div>
+                        <div class="order_btns_box">
+                            <div class="order_cancel"><button>تم الغاء الطلب</button></div>
+                        </div>
+                    </div>
+                    <div class="full_order_box">
+                        <div class="customer_details_box">
+                            <div class="customer_img">
+                                <img src="imgs/categories/crepe.jpg" loading="lazy" alt="">
+                            </div>
+                            <div class="customer_details">
+                                <div class="customer_name">طاولة 1</div>
+                                <div class="order_time">
+                                    <span class="material-icons-outlined">
+                                        schedule
+                                    </span>
+                                    منذ 5 دقائق
+                                </div>
+                            </div>
+                            <div class="order_options">
+                                <span class="dots"></span>
+                            </div>
+                        </div>
+                        <div class="order_details_box">
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">2</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">150 جرام</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">200 جرام</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/crepe2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">تشيكن رانش</div>
+                                <div class="order_size">عادي</div>
+                            </div>
+                        </div>
+                        <div class="customer_note_box">
+                            <div class="note_title">ملحوظة :</div>
+                            <div class="note_text">زود كاتشب ، ومتحطش ورق عنب عشان مبحبهوش</div>
+                        </div>
+                        <div class="order_btns_box">
+                            <div class="order_cancel"><button>تم الغاء الطلب</button></div>
+                        </div>
+                    </div>
+                    <div class="full_order_box">
+                        <div class="customer_details_box">
+                            <div class="customer_img">
+                                <img src="imgs/categories/crepe.jpg" loading="lazy" alt="">
+                            </div>
+                            <div class="customer_details">
+                                <div class="customer_name">طاولة 1</div>
+                                <div class="order_time">
+                                    <span class="material-icons-outlined">
+                                        schedule
+                                    </span>
+                                    منذ 5 دقائق
+                                </div>
+                            </div>
+                            <div class="order_options">
+                                <span class="dots"></span>
+                            </div>
+                        </div>
+                        <div class="order_details_box">
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">2</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">150 جرام</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">200 جرام</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/crepe2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">تشيكن رانش</div>
+                                <div class="order_size">عادي</div>
+                            </div>
+                        </div>
+                        <div class="customer_note_box">
+                            <div class="note_title">ملحوظة :</div>
+                            <div class="note_text">زود كاتشب ، ومتحطش ورق عنب عشان مبحبهوش</div>
+                        </div>
+                        <div class="order_btns_box">
+                            <div class="order_cancel"><button>تم الغاء الطلب</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="receive_orders_box canceled_orders">
+                    <div class="full_order_box">
+                        <div class="customer_details_box">
+                            <div class="customer_img">
+                                <img src="imgs/categories/crepe.jpg" loading="lazy" alt="">
+                            </div>
+                            <div class="customer_details">
+                                <div class="customer_name">طاولة 1</div>
+                                <div class="order_time">
+                                    <span class="material-icons-outlined">
+                                        schedule
+                                    </span>
+                                    منذ 5 دقائق
+                                </div>
+                            </div>
+                            <div class="order_options">
+                                <span class="dots"></span>
+                            </div>
+                        </div>
+                        <div class="order_details_box">
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">2</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">150 جرام</div>
+                                <div class="order_price">99 جـ</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">200 جرام</div>
+                                <div class="order_price">120 جـ</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/crepe2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">تشيكن رانش</div>
+                                <div class="order_size">عادي</div>
+                                <div class="order_price">60 جـ</div>
+                            </div>
+                        </div>
+                        <div class="customer_note_box">
+                            <div class="price_num">
+                                السعر : <span>200 جنيه</span>
+                            </div>
+                            <div class="price_num">
+                                الضريبة : <span>10 جنيه</span>
+                            </div>
+                            <div class="price_num">
+                                المجموع : <span>210 جنيه</span>
+                            </div>
+                        </div>
+                        <div class="order_btns_box">
+                            <div class="order_done"><button>لم يتم الدفع</button></div>
+                        </div>
+                    </div>
+                    <div class="full_order_box">
+                        <div class="customer_details_box">
+                            <div class="customer_img">
+                                <img src="imgs/categories/crepe.jpg" loading="lazy" alt="">
+                            </div>
+                            <div class="customer_details">
+                                <div class="customer_name">طاولة 1</div>
+                                <div class="order_time">
+                                    <span class="material-icons-outlined">
+                                        schedule
+                                    </span>
+                                    منذ 5 دقائق
+                                </div>
+                            </div>
+                            <div class="order_options">
+                                <span class="dots"></span>
+                            </div>
+                        </div>
+                        <div class="order_details_box">
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">2</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">150 جرام</div>
+                                <div class="order_price">99 جـ</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">200 جرام</div>
+                                <div class="order_price">120 جـ</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/crepe2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">تشيكن رانش</div>
+                                <div class="order_size">عادي</div>
+                                <div class="order_price">60 جـ</div>
+                            </div>
+                        </div>
+                        <div class="customer_note_box">
+                            <div class="price_num">
+                                السعر : <span>200 جنيه</span>
+                            </div>
+                            <div class="price_num">
+                                الضريبة : <span>10 جنيه</span>
+                            </div>
+                            <div class="price_num">
+                                المجموع : <span>210 جنيه</span>
+                            </div>
+                        </div>
+                        <div class="order_btns_box">
+                            <div class="order_done"><button>لم يتم الدفع</button></div>
+                        </div>
+                    </div>
+                    <div class="full_order_box">
+                        <div class="customer_details_box">
+                            <div class="customer_img">
+                                <img src="imgs/categories/crepe.jpg" loading="lazy" alt="">
+                            </div>
+                            <div class="customer_details">
+                                <div class="customer_name">طاولة 1</div>
+                                <div class="order_time">
+                                    <span class="material-icons-outlined">
+                                        schedule
+                                    </span>
+                                    منذ 5 دقائق
+                                </div>
+                            </div>
+                            <div class="order_options">
+                                <span class="dots"></span>
+                            </div>
+                        </div>
+                        <div class="order_details_box">
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">2</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">150 جرام</div>
+                                <div class="order_price">99 جـ</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">داديز شرومس</div>
+                                <div class="order_size">200 جرام</div>
+                                <div class="order_price">120 جـ</div>
+                            </div>
+                            <div class="order_details">
+                                <div class="order_img"><img src="imgs/orders/crepe2sm.jpg" loading="lazy" alt=""></div>
+                                <div class="order_num">1</div>
+                                <div class="order_name">تشيكن رانش</div>
+                                <div class="order_size">عادي</div>
+                                <div class="order_price">60 جـ</div>
+                            </div>
+                        </div>
+                        <div class="customer_note_box">
+                            <div class="price_num">
+                                السعر : <span>200 جنيه</span>
+                            </div>
+                            <div class="price_num">
+                                الضريبة : <span>10 جنيه</span>
+                            </div>
+                            <div class="price_num">
+                                المجموع : <span>210 جنيه</span>
+                            </div>
+                        </div>
+                        <div class="order_btns_box">
+                            <div class="order_done"><button>لم يتم الدفع</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <div class="acounts_page">
+        <div class="acounts_box customer_page">
+            <a href="#new_acount" class="add_new_acount">
+                <div class="add_acount_info"><span>إضافة</span> حساب عميل جديد</div>
+                <div class="add_acc_btn">
+                    <button><span class="material-icons-outlined">add</span> </button>
+                </div>
+                <div class="new_acc_tips">
+                    حساب العميل يمكنه من إرسال الطلب الخاص به للطاهي
+                </div>
+            </a>
+            <div class="acount_single">
+                <div class="details_box">
+                    <div class="img"><img src="imgs/man.png" alt=""></div>
+                    <div class="name">حساب العميل 1</div>
+                    <div class="acounts_options"> <span class="dots"></span></div>
+                </div>
+                <div class="acount_info">
+                    <div class="username">
+                        البريد الإلكتروني : <span>acc1@gmail.com</span>
+                    </div>
+                    <div class="password">
+                        كلمة المرور : <span>012012012</span>
+                    </div>
+                    <div class="date">
+                        تاريخ إنشاء الحساب : <span>2022 / 5 / 26 </span>
+                    </div>
+                    <div class="num">
+                        عدد الطلبات : <span>55 طلب يوميا</span>
+                    </div>
+                </div>
+                <div class="btns_box">
+                    <div class="edit_acount"><button>تعديل الحساب</button></div>
+                    <div class="delete_acount"><button>حذف الحساب</button></div>
+                </div>
+            </div>
+            <div class="acount_single">
+                <div class="details_box">
+                    <div class="img"><img src="imgs/man.png" alt=""></div>
+                    <div class="name">حساب العميل 2</div>
+                    <div class="acounts_options"> <span class="dots"></span></div>
+                </div>
+                <div class="acount_info">
+                    <div class="username">
+                        البريد الإلكتروني : <span>acc2@gmail.com</span>
+                    </div>
+                    <div class="password">
+                        كلمة المرور : <span>012012012</span>
+                    </div>
+                    <div class="date">
+                        تاريخ إنشاء الحساب : <span>2022 / 5 / 26 </span>
+                    </div>
+                    <div class="num">
+                        عدد الطلبات : <span>55 طلب يوميا</span>
+                    </div>
+                </div>
+                <div class="btns_box">
+                    <div class="edit_acount"><button>تعديل الحساب</button></div>
+                    <div class="delete_acount"><button>حذف الحساب</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="acounts_box chef_page">
+            <a href="#new_acount" class="add_new_acount">
+                <div class="add_acount_info"><span>إضافة</span> حساب طاهي جديد</div>
+                <div class="add_acc_btn">
+                    <button><span class="material-icons-outlined">add</span> </button>
+                </div>
+                <div class="new_acc_tips">
+                    حساب الطاهي يمكنه من عرض كل الطلبات الخاصة بالعملاء وإرسالها إلي الكاشير بعد اتمامها
+                </div>
+            </a>
+            <div class="acount_single">
+                <div class="details_box">
+                    <div class="img"><img src="imgs/man.png" alt=""></div>
+                    <div class="name">حساب الطاهي 1</div>
+                    <div class="acounts_options"> <span class="dots"></span></div>
+                </div>
+                <div class="acount_info">
+                    <div class="username">
+                        البريد الإلكتروني : <span>acc1@gmail.com</span>
+                    </div>
+                    <div class="password">
+                        كلمة المرور : <span>012012012</span>
+                    </div>
+                    <div class="date">
+                        تاريخ إنشاء الحساب : <span>2022 / 5 / 26 </span>
+                    </div>
+                    <div class="num">
+                        عدد الطلبات المكتملة : <span>55 طلب يوميا</span>
+                    </div>
+                </div>
+                <div class="btns_box">
+                    <div class="edit_acount"><button>تعديل الحساب</button></div>
+                    <div class="delete_acount"><button>حذف الحساب</button></div>
+                </div>
+            </div>
+            <div class="acount_single">
+                <div class="details_box">
+                    <div class="img"><img src="imgs/man.png" alt=""></div>
+                    <div class="name">حساب الطاهي 2</div>
+                    <div class="acounts_options"> <span class="dots"></span></div>
+                </div>
+                <div class="acount_info">
+                    <div class="username">
+                        البريد الإلكتروني : <span>acc2@gmail.com</span>
+                    </div>
+                    <div class="password">
+                        كلمة المرور : <span>012012012</span>
+                    </div>
+                    <div class="date">
+                        تاريخ إنشاء الحساب : <span>2022 / 5 / 26 </span>
+                    </div>
+                    <div class="num">
+                        عدد الطلبات المكتملة : <span>55 طلب يوميا</span>
+                    </div>
+                </div>
+                <div class="btns_box">
+                    <div class="edit_acount"><button>تعديل الحساب</button></div>
+                    <div class="delete_acount"><button>حذف الحساب</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="acounts_box waiter_page">
+            <a href="#new_acount" class="add_new_acount">
+                <div class="add_acount_info"><span>إضافة</span> حساب نادل جديد</div>
+                <div class="add_acc_btn">
+                    <button><span class="material-icons-outlined">add</span> </button>
+                </div>
+                <div class="new_acc_tips">
+                    حساب النادل يمكنه من عرض كل الطلبات الجاهزة للتسليم
+                </div>
+            </a>
+            <div class="acount_single">
+                <div class="details_box">
+                    <div class="img"><img src="imgs/man.png" alt=""></div>
+                    <div class="name">حساب النادل 1</div>
+                    <div class="acounts_options"> <span class="dots"></span></div>
+                </div>
+                <div class="acount_info">
+                    <div class="username">
+                        البريد الإلكتروني : <span>acc1@gmail.com</span>
+                    </div>
+                    <div class="password">
+                        كلمة المرور : <span>012012012</span>
+                    </div>
+                    <div class="date">
+                        تاريخ إنشاء الحساب : <span>2022 / 5 / 26 </span>
+                    </div>
+                    <div class="num">
+                        عدد الطلبات المسلمة : <span>55 طلب يوميا</span>
+                    </div>
+                </div>
+                <div class="btns_box">
+                    <div class="edit_acount"><button>تعديل الحساب</button></div>
+                    <div class="delete_acount"><button>حذف الحساب</button></div>
+                </div>
+            </div>
+            <div class="acount_single">
+                <div class="details_box">
+                    <div class="img"><img src="imgs/man.png" alt=""></div>
+                    <div class="name">حساب النادل 2</div>
+                    <div class="acounts_options"> <span class="dots"></span></div>
+                </div>
+                <div class="acount_info">
+                    <div class="username">
+                        البريد الإلكتروني : <span>acc2@gmail.com</span>
+                    </div>
+                    <div class="password">
+                        كلمة المرور : <span>012012012</span>
+                    </div>
+                    <div class="date">
+                        تاريخ إنشاء الحساب : <span>2022 / 5 / 26 </span>
+                    </div>
+                    <div class="num">
+                        عدد الطلبات المسلمة : <span>55 طلب يوميا</span>
+                    </div>
+                </div>
+                <div class="btns_box">
+                    <div class="edit_acount"><button>تعديل الحساب</button></div>
+                    <div class="delete_acount"><button>حذف الحساب</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="acounts_box casher_page">
+            <a href="#new_acount" class="add_new_acount">
+                <div class="add_acount_info"><span>إضافة</span> حساب كاشير جديد</div>
+                <div class="add_acc_btn">
+                    <button><span class="material-icons-outlined">add</span> </button>
+                </div>
+                <div class="new_acc_tips">
+                    حساب الكاشير يمكنه من عرض كل الطلبات المنتهية واتمام عملية الدفع الخاصة بها
+                </div>
+            </a>
+            <div class="acount_single">
+                <div class="details_box">
+                    <div class="img"><img src="imgs/man.png" alt=""></div>
+                    <div class="name">حساب الكاشير 1</div>
+                    <div class="acounts_options"> <span class="dots"></span></div>
+                </div>
+                <div class="acount_info">
+                    <div class="username">
+                        البريد الإلكتروني : <span>acc1@gmail.com</span>
+                    </div>
+                    <div class="password">
+                        كلمة المرور : <span>012012012</span>
+                    </div>
+                    <div class="date">
+                        تاريخ إنشاء الحساب : <span>2022 / 5 / 26 </span>
+                    </div>
+                    <div class="num">
+                        عدد الطلبات المدفوعة : <span>55 طلب يوميا</span>
+                    </div>
+                </div>
+                <div class="btns_box">
+                    <div class="edit_acount"><button>تعديل الحساب</button></div>
+                    <div class="delete_acount"><button>حذف الحساب</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="acounts_box all_page">
+            <a href="#new_acount" class="add_new_acount">
+                <div class="add_acount_info"><span>إضافة</span> حساب شامل جديد</div>
+                <div class="add_acc_btn">
+                    <button><span class="material-icons-outlined">add</span> </button>
+                </div>
+                <div class="new_acc_tips">
+                    الحساب الشامل يمكنه من ارسال الطلبات الخاصة بالعملاء بالاضافة الي رقم الطاولة الخاصة بها، ويمكنه
+                    ايضا من عرض الطلبات الجاهزة للتسليم
+                </div>
+            </a>
+            <div class="acount_single">
+                <div class="details_box">
+                    <div class="img"><img src="imgs/man.png" alt=""></div>
+                    <div class="name">حساب شامل 1</div>
+                    <div class="acounts_options"> <span class="dots"></span></div>
+                </div>
+                <div class="acount_info">
+                    <div class="username">
+                        البريد الإلكتروني : <span>acc1@gmail.com</span>
+                    </div>
+                    <div class="password">
+                        كلمة المرور : <span>012012012</span>
+                    </div>
+                    <div class="date">
+                        تاريخ إنشاء الحساب : <span>2022 / 5 / 26 </span>
+                    </div>
+                    <div class="num">
+                        عدد الطلبات : <span>55 طلب يوميا</span>
+                    </div>
+                </div>
+                <div class="btns_box">
+                    <div class="edit_acount"><button>تعديل الحساب</button></div>
+                    <div class="delete_acount"><button>حذف الحساب</button></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="new_acc_page">
+        <div class="new_acc_box">
+            <div class="new_acc_title">
+                إنشاء حساب
+                <select>
+                    <option value="0" selected="">عميل</option>
+                    <option value="1">طاهي</option>
+                    <option value="2">نادل</option>
+                    <option value="3">كاشير</option>
+                    <option value="4">شامل</option>
+                </select>
+            </div>
+            <div class="input_box">
+                <label for="acc_name_input">إسم الحساب</label>
+                <input type="text" id="acc_name_input" placeholder=" اضف اسم الحساب">
+            </div>
+            <div class="input_box">
+                <label for="acc_email_input">البريد الإلكتروني</label>
+                <input type="email" id="acc_email_input" placeholder="اضف البريد الإلكتروني">
+            </div>
+            <div class="input_box">
+                <label for="acc_password_input">كلمة المرور</label>
+                <input type="password" id="acc_password_input" placeholder="اضف كلمة المرور">
+            </div>
+            <div class="input_box product_img">
+                <label for="product_img_input">صورة الحساب</label>
+                <label class="img_show" for="acc_img_input"><img loading="lazy" src="imgs/upload_img.png"
+                        alt=""></label>
+                <input hidden type="file" class="file_input" id="acc_img_input">
+            </div>
+            <div class="input_box">
+                <button>إضافة</button>
+            </div>
+        </div>
+    </div>
+
     <div class="about_us_page">
         <div class="about_us_cover">
             <img class="img_cover" src="https://705restaurante.com.br/wp-content/uploads/restaurante-705-img2.jpg"
@@ -581,6 +1257,7 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
     <script src="js/chart.js"></script>
     <script src="js/custom.js"></script>
     <script>
@@ -781,7 +1458,6 @@
             }
         })
     </script>
-
 </body>
 
 </html>
