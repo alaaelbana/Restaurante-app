@@ -26,15 +26,9 @@ mySwiper = new Swiper('.swiper-container', {
 });
 
 function page_hash() {
-    $('.swiper-slide:not(.swiper-slide-active) .order_page').fadeIn()
-    $('.swiper-slide-active .order_page').fadeOut()
-    $('.page_name').text('قائمة الطعام')
-    $('.order_box').removeClass('order_box_large show')
-    $('.order_box').css("margin-top", '0');
-    $('.order_box .order_img').each(function () {
-        img_sm = $(this).find('.order_img_sm').attr('src-data-sm');
-        $(this).find('.order_img_sm').attr('src', img_sm);
-    })
+    setTimeout(() => {
+        window.location.hash = $('.swiper-pagination-bullet-active').attr('name')
+    }, 100);
 }
 $('.swiper-slide .order_page').hide()
 var idleTime = 0;
@@ -126,8 +120,8 @@ $('.order_box .order_img ,.order_box .order_title ,.order_box .order_details ').
     setTimeout(() => {
         $(this).parents('.order_box').addClass('show')
     }, 50);
-    var img_lg = $(this).find('.order_img_sm').attr('src-data');
-    $(this).find('.order_img_sm').attr('src', img_lg);
+    var img_lg = $(this).parents('.order_box').find('.order_img_sm').attr('src-data');
+    $(this).parents('.order_box').find('.order_img_sm').attr('src', img_lg);
 })
 var size_selected
 $('.order_box .order_text .order_options select').change(function () {
@@ -352,11 +346,13 @@ if (window.history && window.history.pushState) {
                 total_amount2 = 0
                 val = 0
                 $(".show_order_box .show_order").html('')
+                $('.add_note_box').hide()
             }
         } else {
             if (window.location.hash == "#show_order") {
                 window.location.hash = "#home"
             }
+
         }
         for (let i = 0; i < names.length; i++) {
             if (window.location.hash == "#" + names[i]) {
@@ -403,3 +399,14 @@ for (let i = 0; i < names.length; i++) {
     $(".categories").append('<a href="#' + names[i] + '"><div><img loading="lazy" src="imgs/categories/' + imgs[i] + '" alt="' + names[i] + ' image"></div><span>' + menu[i] + '<span></a>')
     $(".nav_categories").append('<a href="#' + names[i] + '">' + menu[i] + '</a>')
 }
+
+$('.show_order_box .add_note').click(function () {
+    $('.add_note_box').show()
+})
+$('.add_note_box .close_btn').click(function () {
+    $('.add_note_box').hide()
+    $('.add_note_box .add_note_input textarea').val('')
+})
+$('.add_note_box .add_note_btn button').click(function () {
+    $('.add_note_box').hide()
+})

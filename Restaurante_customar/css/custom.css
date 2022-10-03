@@ -337,7 +337,7 @@ button, input, a, textarea {
 
 
 
-.swiper-slide .order_page {
+.order_page {
     height: calc(100% - 100px);
     overflow: auto;
     display: flex;
@@ -388,7 +388,7 @@ button, input, a, textarea {
     border-radius: 10px;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
 }
 
@@ -400,6 +400,7 @@ button, input, a, textarea {
     display: flex;
     border-left: 2px dashed #36383d;
     cursor: default;
+    justify-content: center;
 }
 
 .order_box_large.order_box .order_img {
@@ -423,7 +424,7 @@ button, input, a, textarea {
 .order_box .order_text {
     font-size: 16px;
     color: #eee;
-    padding: 15px 15px 20px 10px;
+    padding: 10px 10px 15px;
     width: calc(100% - 135px);
 }
 
@@ -554,7 +555,7 @@ button, input, a, textarea {
     flex-direction: row-reverse;
     position: absolute;
     left: 10px;
-    bottom: 10px;
+    bottom: 5px;
     overflow: hidden;
     padding: 5px 0;
 }
@@ -775,10 +776,11 @@ button, input, a, textarea {
     background-color: #272a2f;
     box-shadow: 0 0 18px -3px #1e1e1ebe;
     direction: rtl;
-    padding: 25px 15px;
+    padding: 30px 15px;
     width: calc(100% - 25px);
     text-align: center;
     border-radius: 8px;
+    display: none;
 }
 
 .add_note_box .add_note_title {
@@ -811,9 +813,22 @@ button, input, a, textarea {
     padding: 7px 10px;
     border-radius: 5px;
     width: 52%;
-    margin: 10px auto 5px;
+    margin: 10px auto 0;
     box-shadow: -3px -3px 7px -6px rgba(255, 255, 255, 0.15), 4px 4px 7px -2px rgba(0, 0, 0, 0.15);
     text-shadow: 0px 0px 12px #0000004f;
+}
+
+.add_note_box .close_btn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    display: flex;
+}
+
+.add_note_box .close_btn span {
+    font-size: 22px;
+    color: #ddd;
 }
 
 .about_us_page {
@@ -880,16 +895,17 @@ button, input, a, textarea {
     color: #eee;
 }
 
-.waiting_order {
+.waiting_order, .queue_box {
     height: 100vh;
     z-index: 102;
     position: fixed;
-    top: 6px;
+    top: 0px;
     padding: 50px 25px;
     display: none;
     width: 100%;
-    background: linear-gradient(180deg, rgb(40 42 47) 0%, rgb(36 39 43) 50%, rgb(30 32 36) 100%);
+    background: linear-gradient(180deg, rgb(37 39 45) 0%, rgb(36 39 43) 50%, rgb(30 32 36) 100%)
 }
+
 
 .waiting_order .waitting_text {
     font-size: 22px;
@@ -900,6 +916,92 @@ button, input, a, textarea {
 
 .waiting_order img {
     border-radius: 5px;
+}
+
+.queue_box {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    padding: 70px 10px 0px;
+}
+
+.queue_box .queue_text_box {
+    padding: 0px;
+    margin: 0px 5px;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+    background-color: #272a2f;
+    justify-content: space-between;
+    box-shadow: -2px -2px 8px -7px rgb(255 255 255 / 40%), 3px 3px 7px -5px rgb(0 0 0 / 40%)
+}
+
+.queue_box .queue_title {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.queue_box .queue_details {
+    margin-bottom: 25px;
+    color: #ddd;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.queue_box .add_more_title {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.queue_box .queue_text {
+    color: #eee;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 12px 15px;
+}
+
+.queue_box .queue_num {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    background: #5a226d9e;
+    padding: 15px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: inset 3px 3px 6px -6px rgb(255 255 255 / 40%), inset -4px -4px 6px -5px rgb(0 0 0 / 40%);
+}
+
+
+.queue_box .queue_num span {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.queue_box .queue_btns {
+    margin-top: 10px;
+    display: flex;
+}
+
+
+.queue_box .order_page {
+    height: auto;
+    padding: 15px 5px;
+}
+
+.queue_box .order_page .order_box:last-child {
+    margin-bottom: 30px;
+}
+
+.queue_box .order_box .order_text {
+    text-align: right;
+}
+
+.queue_box .order_box_large.order_box.show {
+    left: 0;
+    height: calc(100% - 50px);
+    top: 50px;
 }
 
 .cover {
