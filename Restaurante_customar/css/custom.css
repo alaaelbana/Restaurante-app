@@ -79,6 +79,7 @@ button, input, a, textarea {
     z-index: 110;
     font-size: 16px;
     align-items: center;
+    background: #282a2f;
 }
 
 .header.hide, .show_order_header.hide {
@@ -614,6 +615,7 @@ button, input, a, textarea {
 }
 
 .customer_order_box {
+    left: 0;
     position: fixed;
     bottom: 5px;
     z-index: 99;
@@ -637,6 +639,7 @@ button, input, a, textarea {
     color: #fff;
     font-weight: 600;
     cursor: default;
+    direction: ltr;
 }
 
 .customer_order_box .customer_order_details span {
@@ -903,7 +906,7 @@ button, input, a, textarea {
     padding: 50px 25px;
     display: none;
     width: 100%;
-    background: linear-gradient(180deg, rgb(37 39 45) 0%, rgb(36 39 43) 50%, rgb(30 32 36) 100%)
+    background: linear-gradient(180deg, rgb(40 42 47) 0%, rgb(36 39 43) 50%, rgb(30 32 36) 100%);
 }
 
 
@@ -919,10 +922,9 @@ button, input, a, textarea {
 }
 
 .queue_box {
-    display: flex;
-    flex-direction: column;
     direction: rtl;
     padding: 70px 10px 0px;
+    overflow: auto;
 }
 
 .queue_box .queue_text_box {
@@ -930,7 +932,6 @@ button, input, a, textarea {
     margin: 0px 5px;
     display: flex;
     border-radius: 5px;
-    margin-bottom: 20px;
     align-items: center;
     background-color: #272a2f;
     justify-content: space-between;
@@ -939,11 +940,11 @@ button, input, a, textarea {
 
 .queue_box .queue_title {
     font-size: 22px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .queue_box .queue_details {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     color: #ddd;
     font-size: 13px;
     margin-right: 5px;
@@ -952,6 +953,7 @@ button, input, a, textarea {
 .queue_box .add_more_title {
     font-size: 18px;
     color: #ddd;
+    padding-bottom: 10px;
 }
 
 .queue_box .queue_text {
@@ -966,11 +968,11 @@ button, input, a, textarea {
     flex-direction: column;
     align-items: center;
     font-size: 13px;
-    background: #5a226d9e;
+    background: #422960;
     padding: 15px 16px;
     border-radius: 8px;
     font-weight: 600;
-    box-shadow: inset 3px 3px 6px -6px rgb(255 255 255 / 40%), inset -4px -4px 6px -5px rgb(0 0 0 / 40%);
+    box-shadow: inset 3px 3px 7px -6px rgb(255 255 255 / 40%), inset -4px -4px 10px -5px rgb(0 0 0 / 40%);
 }
 
 
@@ -980,18 +982,35 @@ button, input, a, textarea {
 }
 
 .queue_box .queue_btns {
-    margin-top: 10px;
+    margin: 30px 5px;
     display: flex;
+    gap: 15px;
 }
 
+.queue_box .queue_btns button {
+    width: 50%;
+    background: transparent;
+    border: none;
+    font-family: 'tajawal', sans-serif;
+    color: #fff;
+    font-weight: 500;
+    padding: 7px;
+    border-radius: 5px;
+    color: #ff5656;
+    box-shadow: -3px -3px 7px -7px rgb(255 255 255 / 40%), 4px 4px 7px -4px rgb(0 0 0 / 40%);
+}
+
+.queue_box .queue_btns button:last-child {
+    color: #18df8f;
+}
 
 .queue_box .order_page {
     height: auto;
-    padding: 15px 5px;
+    padding: 5px 5px 15px;
 }
 
 .queue_box .order_page .order_box:last-child {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .queue_box .order_box .order_text {
