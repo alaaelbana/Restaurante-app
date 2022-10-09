@@ -466,20 +466,33 @@ button, input, a, textarea {
     min-width: 100px;
 }
 
-.add_category, .add_product, .new_acc_box {
+.add_category, .add_product, .new_acc_box, .add_tax {
     width: 100%;
     padding: 20px;
     background-color: #202227;
     border-radius: 8px;
 }
 
-.add_category .category_title, .add_product .product_title, .new_acc_box .new_acc_title {
+.add_category .category_title, .add_product .product_title,
+.new_acc_box .new_acc_title, .add_tax .tax_title {
     font-size: 18px;
     margin-bottom: 10px;
     margin-right: -5px;
 }
 
-.add_category .input_box, .add_product .input_box, .new_acc_box .input_box {
+.add_tax .current_tax {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add_tax .tax_val_box .tax_val {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 5px;
+}
+
+.add_category .input_box, .add_product .input_box,
+.new_acc_box .input_box, .add_tax .input_box {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -528,7 +541,8 @@ button, input, a, textarea {
 
 .add_category .input_box label,
 .add_product .input_box label,
-.new_acc_box .input_box label {
+.new_acc_box .input_box label,
+.add_tax .input_box label {
     font-size: 13px;
     font-weight: 500;
     position: relative;
@@ -567,14 +581,15 @@ button, input, a, textarea {
 .add_category .input_box input,
 .add_product .input_box input,
 .add_product .input_box textarea,
-.new_acc_box .input_box input {
+.new_acc_box .input_box input,
+.add_tax .input_box input {
     padding: 8px 10px;
     color: #eee;
     border: 1px solid #2a2a2a;
     background-color: transparent;
     font-family: 'tajawal', 'Roboto', sans-serif;
     margin-top: 8px;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 5px;
     max-width: 100%;
     min-width: 100%;
@@ -582,7 +597,8 @@ button, input, a, textarea {
 
 .add_category .input_box button,
 .add_product .input_box button,
-.new_acc_box .input_box button {
+.new_acc_box .input_box button,
+.add_tax .input_box button {
     border: 2px solid #0fac6a33;
     color: #ddd;
     font-weight: 700;
@@ -598,7 +614,8 @@ button, input, a, textarea {
 
 .edit_category_box, .edit_category_sinle,
 .delete_category_box, .add_category_box,
-.add_product_box, .acounts_page, .new_acc_page {
+.add_product_box, .add_tax_box,
+.acounts_page, .new_acc_page {
     padding: 75px 10px 30px;
     direction: rtl;
     width: 100%;
@@ -1130,6 +1147,10 @@ button, input, a, textarea {
     align-content: flex-start;
     padding-top: 5px;
 }
+
+
+
+
 
 .acounts_page .acounts_box {
     margin-bottom: 20px;

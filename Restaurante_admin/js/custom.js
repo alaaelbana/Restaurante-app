@@ -121,6 +121,10 @@ if (window.history && window.history.pushState) {
             $('.delete_confirmation_box').hide()
             $('.delete_category_box').hide()
             $('.cover').fadeOut()
+            $('.nav_categories').slideUp()
+            $('.expand_more').removeClass('rotat')
+            $('.nav_bar').removeClass('nav_show')
+            $('.nav_bar').fadeOut()
 
         }
         if (window.location.hash == "#add_product") {
@@ -147,6 +151,13 @@ if (window.history && window.history.pushState) {
             $('.page_name').text('الطلبات')
         } else {
             $('.receive_orders_box').hide()
+        }
+
+        if (window.location.hash == "#tax") {
+            $('.add_tax_box').show()
+            $('.page_name').text('الضريبة')
+        } else {
+            $('.add_tax_box').hide()
         }
 
         if (window.location.hash == "#customer_page") {
@@ -210,9 +221,17 @@ $('.delete_category_box .category_box').click(function () {
 $('.delete_confirmation_box .delete_confirmation .delete_confirmation_btns button').click(function () {
     history.back()
 })
+
 $('.order_box .order_text .order_options select').change(function () {
     size_selected = $(this).parent().find('.selected').attr('data-value')
     $(this).parents('.order_text').find('.order_price span').addClass('hide')
     $(this).parents('.order_text').find('.order_price span:nth-child(' + size_selected + ')').removeClass('hide')
     $(this).parents('.order_text').find('.order_num .input_num').val($(this).parent().find('.nice-select .selected').attr('price_val'))
+})
+
+$('.add_tax_box .add_tax .input_box #flat_tax').change(function () {
+    $('.add_tax_box .add_tax .tax_val_box .flat_tax_text span').text($(this).val() + ' جنيه')
+})
+$('.add_tax_box .add_tax .input_box #variable_tax').change(function () {
+    $('.add_tax_box .add_tax .tax_val_box .variable_tax_text span').text($(this).val() / 100 * 1000 + ' جنيه')
 })

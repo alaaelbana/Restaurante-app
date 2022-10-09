@@ -35,7 +35,7 @@
             <div class="nav_link categories_link_box">
                 <div class="categories_link">
                     <span class="material-icons-outlined">
-                        restaurant
+                        restaurant_menu
                     </span>
                     التصنيفات
                     <span class="material-icons-outlined expand_more">
@@ -68,9 +68,15 @@
             </div>
             <a href="#orders" class="nav_link">
                 <span class="material-icons-outlined">
-                    restaurant
+                    fastfood
                 </span>
                 الطلبات
+            </a>
+            <a href="#tax" class="nav_link">
+                <span class="material-icons-outlined">
+                    local_atm
+                </span>
+                الضريبة
             </a>
             <div class="nav_link categories_link_box">
                 <div class="categories_link">
@@ -930,6 +936,38 @@
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+    </div>
+    <div class="add_tax_box">
+        <div class="add_tax">
+            <div class="tax_title">أضف ضريبة جديدة</div>
+            <div class="input_box">
+                <label for="flat_tax">الضريبة الثابتة :</label>
+                <input type="number" id="flat_tax" min="0"
+                    placeholder="الضريبة الثابتة تضاف علي كل الطلبات بدون تغير في القيمة">
+            </div>
+            <div class="input_box">
+                <label for="variable_tax">الضريبة المئوية :</label>
+                <input type="number" id="variable_tax" min="0" max="100"
+                    placeholder="الضريبة المئوية تتغير علي حسب سعر كل طلب">
+            </div>
+            <div class="tax_val_box">
+                <div class="tax_val">
+                    إذا كان سعر الطلب
+                    <span>1000 جنيه</span>
+                </div>
+                <div class="tax_val flat_tax_text">
+                    فإن الضريبة الثابته ستكون :
+                    <span>0 جنيه</span>
+                </div>
+                <div class="tax_val variable_tax_text">
+                    والضريبة المئوية ستكون :
+                    <span>0 جنيه</span>
+                </div>
+            </div>
+            <div class="input_box">
+                <button>حفظ</button>
+            </div>
+        </div>
     </div>
     <div class="acounts_page">
         <div class="acounts_box customer_page">
