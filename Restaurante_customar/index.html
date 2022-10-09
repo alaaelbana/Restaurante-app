@@ -21,8 +21,6 @@
 
 <body>
 
-    <!-- Slider main container -->
-
     <div class="nav_bar">
         <div class="profile_box">
             <div class="profile_pic"><img src="imgs/man.png" alt=""></div>
@@ -85,11 +83,37 @@
         <div class="categories">
         </div>
         <div class="swiper-container" dir="rtl">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                <!-- Slides -->
                 <div class="swiper-slide">
                     <div class="order_page">
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/burger3.jpg"
+                                    src-data-sm="imgs/orders/burger3sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">بافلو دجاج حار <span>الأكثر طلبا</span></div>
+                                <div class="order_details">صدر دجاج مقلي، صوص بافلو، خس، خيار مخلل، صوص داديز وصوص رانش
+                                </div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>سينجل</option>
+                                        <option value="2" price_val="0">دوبل</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>75</span>
+                                    <span class="hide">100</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="order_box">
                             <div class="order_img">
                                 <img class="order_img_sm" loading="lazy" src-data="imgs/orders/burger1.jpg"
@@ -138,34 +162,6 @@
                                 <div class="order_price">
                                     <span>75</span>
                                     <span class="hide">90</span>
-                                    جنيه
-                                </div>
-                                <div class="order_num">
-                                    <div class="value-button decrease">-</div>
-                                    <input class="input_num" type="number" min="0" max="999" value="0" />
-                                    <div class="value-button increase">+</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order_box">
-                            <div class="order_img">
-                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/burger3.jpg"
-                                    src-data-sm="imgs/orders/burger3sm.jpg" src="" alt="">
-                            </div>
-                            <div class="order_text">
-                                <div class="order_title">بافلو دجاج حار</div>
-                                <div class="order_details">صدر دجاج مقلي، صوص بافلو، خس، خيار مخلل، صوص داديز وصوص رانش
-                                </div>
-                                <div class="order_options">
-                                    اختر الحجم :
-                                    <select>
-                                        <option value="1" price_val="0" selected>سينجل</option>
-                                        <option value="2" price_val="0">دوبل</option>
-                                    </select>
-                                </div>
-                                <div class="order_price">
-                                    <span>75</span>
-                                    <span class="hide">100</span>
                                     جنيه
                                 </div>
                                 <div class="order_num">
@@ -585,10 +581,7 @@
                     </div>
                 </div>
             </div>
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
