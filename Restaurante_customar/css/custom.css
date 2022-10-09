@@ -459,6 +459,10 @@ button, input, a, textarea {
     font-size: 20px;
 }
 
+.order_box_large.order_box .order_text .order_title span {
+    display: none;
+}
+
 .order_box .order_text .order_details {
     font-size: 12px;
     margin: 5px 0 12px;
@@ -756,12 +760,16 @@ button, input, a, textarea {
 
 .order_total_price {
     width: 100%;
-    padding: 20px;
+    padding: 0px 20px;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
-    margin: 0 0 15px;
+    margin: 15px 0 0;
     align-items: center;
+}
+
+.order_total_price:last-child {
+    margin-bottom: 15px;
 }
 
 .order_total_price span {

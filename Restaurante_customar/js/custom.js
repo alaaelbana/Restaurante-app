@@ -316,14 +316,30 @@ if (window.history && window.history.pushState) {
                 setTimeout(() => {
                     $(".show_order_box .show_order").append(
                         `<div class="order_total_price">
-                        <span>
-                            المجموع الكلي :
-                        </span>
-                        <span>
-                            <i class="material-icons-outlined">payments</i>
-                            ${total_amount + total_amount2} جنيه
-                        </span>
-                    </div>`
+                            <span>
+                                السعر :
+                            </span>
+                            <span>
+                                ${total_amount + total_amount2} جنيه
+                            </span>
+                        </div>
+                        <div class="order_total_price">
+                            <span>
+                                الضريبة :
+                            </span>
+                            <span>
+                                30 جنيه
+                            </span>
+                        </div>
+                        <div class="order_total_price">
+                            <span>
+                                المجموع الكلي :
+                            </span>
+                            <span>
+                                <i class="material-icons-outlined">payments</i>
+                                ${total_amount + total_amount2 + 30} جنيه
+                            </span>
+                        </div>`
                     )
                 }, 150);
 
