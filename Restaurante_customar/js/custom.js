@@ -100,6 +100,8 @@ $('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories').click(func
     $('.expand_more').removeClass('rotat')
     $('.nav_bar').removeClass('nav_show')
     $('.cover').fadeOut()
+    $('.add_note_box').fadeOut()
+
 })
 document.getElementById("cover").addEventListener('touchmove', function (e) {
     setTimeout(() => {
@@ -215,7 +217,6 @@ $(".order_num .input_num").change(function () {
 });
 $('.send_order').click(function () {
     window.location.hash = '#queue_order'
-
 })
 var val = 0
 if (window.history && window.history.pushState) {
@@ -328,7 +329,7 @@ if (window.history && window.history.pushState) {
                                 الضريبة :
                             </span>
                             <span>
-                                30 جنيه
+                            ${Math.round(10/100*(total_amount + total_amount2))} جنيه
                             </span>
                         </div>
                         <div class="order_total_price">
@@ -337,7 +338,7 @@ if (window.history && window.history.pushState) {
                             </span>
                             <span>
                                 <i class="material-icons-outlined">payments</i>
-                                ${total_amount + total_amount2 + 30} جنيه
+                                ${Math.round(total_amount + total_amount2 + 10/100*(total_amount + total_amount2))} جنيه
                             </span>
                         </div>`
                     )
@@ -415,14 +416,17 @@ for (let i = 0; i < names.length; i++) {
 }
 
 $('.show_order_box .add_note').click(function () {
-    $('.add_note_box').show()
+    $('.add_note_box').fadeIn()
+    $('.cover').fadeIn()
 })
 $('.add_note_box .close_btn').click(function () {
-    $('.add_note_box').hide()
+    $('.add_note_box').fadeOut()
     $('.add_note_box .add_note_input textarea').val('')
+    $('.cover').fadeOut()
 })
 $('.add_note_box .add_note_btn button').click(function () {
-    $('.add_note_box').hide()
+    $('.add_note_box').fadeOut()
+    $('.cover').fadeOut()
 })
 
 

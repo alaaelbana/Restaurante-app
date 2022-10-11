@@ -514,6 +514,18 @@ button, input, a, textarea {
     height: auto;
 }
 
+.add_product .input_box.out_of_stock {
+    flex-direction: row;
+    align-items: center;
+}
+
+.add_product .input_box.out_of_stock input {
+    min-width: auto;
+    margin: 0 0 0 5px;
+    padding: 5px;
+    transform: translateY(1px);
+}
+
 .add_product .product_size_price_box .input_box {
     width: calc(50% - 5px);
 }

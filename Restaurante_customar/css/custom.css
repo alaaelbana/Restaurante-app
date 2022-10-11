@@ -70,7 +70,7 @@ button, input, a, textarea {
     font-family: 'Material Icons Two Tone';
 }
 
-.header, .show_order_header {
+.header {
     position: absolute;
     top: 0;
     width: 100%;
@@ -82,11 +82,11 @@ button, input, a, textarea {
     background: #282a2f;
 }
 
-.header.hide, .show_order_header.hide {
+.header.hide {
     display: none;
 }
 
-.header .header_btn, .show_order_header .header_btn {
+.header .header_btn {
     display: flex;
     padding: 20px;
     align-items: center;
@@ -94,13 +94,13 @@ button, input, a, textarea {
     position: relative;
 }
 
-.header .back_btn .header_btn, .show_order_header .back_btn .header_btn {
+.header .back_btn .header_btn {
     font-size: 18px;
     cursor: default;
     color: #fff;
 }
 
-.header .back_btn .header_btn::after, .show_order_header .back_btn .header_btn::after {
+.header .back_btn .header_btn::after {
     content: '';
     width: 10px;
     height: 2px;
@@ -455,6 +455,14 @@ button, input, a, textarea {
     right: 5px;
 }
 
+.order_box.out_of_stock .order_text .order_title span {
+    background: #a53030;
+    right: auto;
+    left: 10px;
+    top: 5px;
+    padding: 3px 15px;
+}
+
 .order_box_large.order_box .order_text .order_title {
     font-size: 20px;
 }
@@ -595,6 +603,12 @@ button, input, a, textarea {
     border: 1px solid #3f3f41;
 }
 
+.order_box.out_of_stock .order_text .order_num>div,
+.order_box.out_of_stock .order_text .order_num .input_num {
+    opacity: .5;
+    pointer-events: none;
+}
+
 .order_box_large.order_box .order_text .order_num>div {
     width: 32px;
     height: 32px;
@@ -669,6 +683,7 @@ button, input, a, textarea {
     flex-direction: column;
     justify-content: space-between;
     padding-top: 60px;
+    direction: rtl;
 }
 
 .show_order_box.show {
@@ -787,7 +802,7 @@ button, input, a, textarea {
     position: fixed;
     top: 50%;
     left: 50%;
-    z-index: 99;
+    z-index: 999;
     transform: translate(-50%, -50%);
     background-color: #272a2f;
     box-shadow: 0 0 18px -3px #1e1e1ebe;
