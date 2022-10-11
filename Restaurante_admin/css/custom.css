@@ -523,7 +523,6 @@ button, input, a, textarea {
     min-width: auto;
     margin: 0 0 0 5px;
     padding: 5px;
-    transform: translateY(1px);
 }
 
 .add_product .product_size_price_box .input_box {
