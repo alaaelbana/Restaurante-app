@@ -996,7 +996,7 @@ button, input, a, textarea {
     flex-direction: column;
     align-items: center;
     font-size: 13px;
-    background: #422960;
+    background: #602929;
     padding: 15px 16px;
     border-radius: 8px;
     font-weight: 600;
@@ -1052,16 +1052,23 @@ button, input, a, textarea {
 }
 
 .receive_orders_box {
-    padding: 65px 15px 30px;
-    direction: rtl;
+    top: 0;
     width: 100%;
+    z-index: 100;
     display: none;
+    direction: rtl;
+    overflow: auto;
+    margin: 60px 0 0;
+    position: absolute;
+    padding: 5px 10px 30px;
+    height: calc(100vh - 60px);
+    background: linear-gradient(180deg, rgb(40 42 47) 0%, rgb(36 39 43) 50%, rgb(30 32 36) 100%);
 }
 
 .receive_orders_box .full_order_box {
     padding: 10px 0 10px 0px;
     box-shadow: 0 0 13px -3px rgb(23 23 23 / 51%);
-    background-color: #202227;
+    background-color: #272a2f;
     border-radius: 5px;
     margin-bottom: 20px;
 }

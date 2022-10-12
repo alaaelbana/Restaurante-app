@@ -390,6 +390,12 @@ if (window.history && window.history.pushState) {
                 }
             })
         }
+        if (window.location.hash == "#orders") {
+            $('.receive_orders_box').show()
+            $('.page_name').text('الطلبات')
+        } else {
+            $('.receive_orders_box').hide()
+        }
         if (window.location.hash == "#about") {
             $('.about_us_page').show()
             $('.page_name').text('عن مطعمنا')
