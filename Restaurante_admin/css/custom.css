@@ -513,7 +513,7 @@ button, input, a, textarea {
 .add_product .product_size_price_box.show {
     height: auto;
 }
-
+    
 .add_product .input_box.out_of_stock {
     flex-direction: row;
     align-items: center;

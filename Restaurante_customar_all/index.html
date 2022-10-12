@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+    <meta name="theme-color" content="#1e2024" />
+    <link rel="apple-touch-icon" href="imgs/food.png">
+    <link rel="shortcut icon" href="imgs/food.png">
+    <title>Restaurante</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+
+    <link rel="stylesheet" href="css/fonts-Roboto-Tajawal.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+    <div class="nav_bar">
+        <div class="profile_box">
+            <div class="profile_pic"><img src="imgs/man.png" alt=""></div>
+            <div class="profile_name">admin admin</div>
+        </div>
+        <div class="nav_links_box">
+            <a href="#home" class="nav_link">
+                <span class="material-icons-outlined">
+                    home
+                </span>
+                الرئيسية
+            </a>
+            <div class="nav_link categories_link_box">
+                <div class="categories_link">
+                    <span class="material-icons-outlined">
+                        restaurant
+                    </span>
+                    التصنيفات
+                    <span class="material-icons-outlined expand_more">
+                        expand_more
+                    </span>
+                </div>
+
+                <div class="nav_categories"></div>
+            </div>
+            <a href="#about" class="nav_link">
+                <span class="material-icons-outlined">
+                    groups
+                </span>
+                عن مطعمنا
+            </a>
+            <a href="#setting" class="nav_link">
+                <span class="material-icons-outlined">
+                    manage_accounts
+                </span>
+                إعدادات الحساب
+            </a>
+            <a href="../index.html" class="nav_link">
+                <span class="material-icons-outlined">
+                    power_settings_new
+                </span>
+                تسجيل الخروج
+            </a>
+        </div>
+    </div>
+    <div class="page_content">
+        <header class="header">
+            <div class="back_btn" onclick="back_btn()">
+                <div class="header_btn material-icons-outlined">
+                    arrow_back
+                </div>
+            </div>
+            <div class="page_name">الأصناف</div>
+            <div class="menu_btn">
+                <span class="header_btn material-icons-outlined">
+                    menu
+                </span>
+            </div>
+        </header>
+        <div class="categories">
+        </div>
+        <div class="swiper-container" dir="rtl">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="order_page">
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/burger3.jpg"
+                                    src-data-sm="imgs/orders/burger3sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">بافلو دجاج حار <span>الأكثر طلبا</span></div>
+                                <div class="order_details">صدر دجاج مقلي، صوص بافلو، خس، خيار مخلل، صوص داديز وصوص رانش
+                                </div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>سينجل</option>
+                                        <option value="2" price_val="0">دوبل</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>75</span>
+                                    <span class="hide">100</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/burger1.jpg"
+                                    src-data-sm="imgs/orders/burger1sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">جلادياتور</div>
+                                <div class="order_details">برجر لحم مشوى، صوص باربيكيو مدخن، بيف بيكون، أوراق جرجير، خس،
+                                    خيار مخلل، جبنة إيمنتال و شيدر، صوص داديز وصوص مشروم</div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>150 جم</option>
+                                        <option value="2" price_val="0">200 جم</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>95</span>
+                                    <span class="hide">110</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box out_of_stock">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/burger2.jpg"
+                                    src-data-sm="imgs/orders/burger2sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">داديز شرومس <span>نفذت الكمية</span></div>
+                                <div class="order_details">برجر لحم مشوى، صوص داديز، خس، جبنة امنتال، صوص مشروم وبصل
+                                    مكرمل
+                                </div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>150 جم</option>
+                                        <option value="2" price_val="0">200 جم</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>75</span>
+                                    <span class="hide">90</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/burger4.jpg"
+                                    src-data-sm="imgs/orders/burger4sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">ميلانو</div>
+                                <div class="order_details">برجر لحم مشوى، سلامى مشوى، اصابع موتزاريلا مقلية، طماطم، خس،
+                                    صوص
+                                    بيستو وجرجير
+                                </div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>150 جم</option>
+                                        <option value="2" price_val="0">200 جم</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>85</span>
+                                    <span class="hide">100</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="order_page">
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/pizza0.jpg"
+                                    src-data-sm="imgs/orders/pizza0sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">بيتزا خضروات <span>الأكثر طلبا</span></div>
+                                <div class="order_details">موتزاريلا، صوص طماطم، بصل، زيتون كالاماتا، فلفل، مشروم</div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>وسط</option>
+                                        <option value="2" price_val="0">كبير</option>
+                                        <option value="3" price_val="0">نيو يوركر</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>100</span>
+                                    <span class="hide">130</span>
+                                    <span class="hide">215</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/pizza1.jpg"
+                                    src-data-sm="imgs/orders/pizza1sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">بيتزا لحوم</div>
+                                <div class="order_details">موتزاريلا، صوص طماطم، بيبرونى، هوت دوج، لحم مفروم</div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>وسط</option>
+                                        <option value="2" price_val="0">كبير</option>
+                                        <option value="3" price_val="0">نيو يوركر</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>109</span>
+                                    <span class="hide">135</span>
+                                    <span class="hide">220</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/pizza2.jpg"
+                                    src-data-sm="imgs/orders/pizza2sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">بيتزا بيبرونى</div>
+                                <div class="order_details">موتزاريلا، صوص طماطم، بيبرونى</div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>وسط</option>
+                                        <option value="2" price_val="0">كبير</option>
+                                        <option value="3" price_val="0">نيو يوركر</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>100</span>
+                                    <span class="hide">130</span>
+                                    <span class="hide">215</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/pizza3.jpg"
+                                    src-data-sm="imgs/orders/pizza3sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">بيتزا مكرمل</div>
+                                <div class="order_details">موتزاريلا، صوص طماطم، هوت دوج، لحم مفروم، بصل مكرمل </div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>وسط</option>
+                                        <option value="2" price_val="0">كبير</option>
+                                        <option value="3" price_val="0">نيو يوركر</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>109</span>
+                                    <span class="hide">135</span>
+                                    <span class="hide">220</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/pizza4.jpg"
+                                    src-data-sm="imgs/orders/pizza4sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">بيتزا سجق شرقى</div>
+                                <div class="order_details">موتزاريلا، صوص طماطم، سجق، بصل، فلفل </div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>وسط</option>
+                                        <option value="2" price_val="0">كبير</option>
+                                        <option value="3" price_val="0">نيو يوركر</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>109</span>
+                                    <span class="hide">135</span>
+                                    <span class="hide">220</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/pizza5.jpg"
+                                    src-data-sm="imgs/orders/pizza5sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">بيتزا تونة</div>
+                                <div class="order_details">موتزاريلا، صوص طماطم، تونة، فلفل، بصل و زيتون كالاماتا</div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>وسط</option>
+                                        <option value="2" price_val="0">كبير</option>
+                                        <option value="3" price_val="0">نيو يوركر</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>109</span>
+                                    <span class="hide">135</span>
+                                    <span class="hide">220</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="order_page">
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/crepe1.jpg"
+                                    src-data-sm="imgs/orders/crepe1sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">زنجر سوبريم <span>الأكثر طلبا</span></div>
+                                <div class="order_details">استربس، لحم رومى مدخن و موتزاريلا</div>
+                                <div class="order_price">
+                                    <span>55</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/crepe2.jpg"
+                                    src-data-sm="imgs/orders/crepe2sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">تشيكن رانش</div>
+                                <div class="order_details">كفتة فراخ، برجر فراخ، فراخ بانيه، سوسيس فراخ، استربس، شاورما
+                                    فراخ
+                                    و جبنة موتزاريلا</div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>عادي</option>
+                                        <option value="2" price_val="0">جامبو</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>45</span>
+                                    <span class="hide">55</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/crepe3.jpg"
+                                    src-data-sm="imgs/orders/crepe3sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">الوحش</div>
+                                <div class="order_details">كوردون بلو، ناجتس، كفتة فراخ، بانيه، موتزاريلا</div>
+                                <div class="order_price">
+                                    <span>47</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/crepe4.jpg"
+                                    src-data-sm="imgs/orders/crepe4sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">سوبر كرانشى</div>
+                                <div class="order_details">بانيه كرسبى، سلامى و موتزاريلا</div>
+                                <div class="order_options">
+                                    اختر الحجم :
+                                    <select>
+                                        <option value="1" price_val="0" selected>عادي</option>
+                                        <option value="2" price_val="0">جامبو</option>
+                                    </select>
+                                </div>
+                                <div class="order_price">
+                                    <span>40</span>
+                                    <span class="hide">50</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="order_page">
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet1.jpg"
+                                    src-data-sm="imgs/orders/sweet1sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">ريد فيلفيت <span>الأكثر طلبا</span></div>
+                                <div class="order_details">كيك ريد فيلفت وجبنة كريمى</div>
+                                <div class="order_price">
+                                    <span>25</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet2.jpg"
+                                    src-data-sm="imgs/orders/sweet2sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">كوب فيرين جالاكسى</div>
+                                <div class="order_details"></div>
+                                <div class="order_price">
+                                    <span>25</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet3.jpg"
+                                    src-data-sm="imgs/orders/sweet3sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">تارت مورو</div>
+                                <div class="order_details">سابليه، كريمة كراميل، كيك فادج، قطع مورو، صوص كراميل وكريمة
+                                    بيضاء
+                                </div>
+                                <div class="order_price">
+                                    <span>27</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet5.jpg"
+                                    src-data-sm="imgs/orders/sweet5sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">تارت عين جمل</div>
+                                <div class="order_details">سابليه ابيض، كريمة باسترى، عين جمل وصوص كراميل</div>
+                                <div class="order_price">
+                                    <span>27</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_box">
+                            <div class="order_img">
+                                <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet4.jpg"
+                                    src-data-sm="imgs/orders/sweet4sm.jpg" src="" alt="">
+                            </div>
+                            <div class="order_text">
+                                <div class="order_title">فادج</div>
+                                <div class="order_details">كيك فادج، بسكويت فادج، موس شوكولاتة ومكسرات</div>
+                                <div class="order_price">
+                                    <span>25</span>
+                                    جنيه
+                                </div>
+                                <div class="order_num">
+                                    <div class="value-button decrease">-</div>
+                                    <input class="input_num" type="number" min="0" max="999" value="0" />
+                                    <div class="value-button increase">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="receive_orders_box">
+            <div class="full_order_box">
+                <div class="customer_details_box">
+                    <div class="customer_img">
+                        <img src="imgs/categories/crepe.jpg" loading="lazy" alt="">
+                    </div>
+                    <div class="customer_details">
+                        <div class="customer_name">طاولة 1</div>
+                        <div class="order_time">
+                            <span class="material-icons-outlined">
+                                schedule
+                            </span>
+                            منذ 5 دقائق
+                        </div>
+                    </div>
+                    <div class="order_options">
+                        <span class="dots"></span>
+                    </div>
+                </div>
+                <div class="order_details_box">
+                    <div class="order_details">
+                        <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                        <div class="order_num">2</div>
+                        <div class="order_name">داديز شرومس</div>
+                        <div class="order_size">150 جرام</div>
+                    </div>
+                    <div class="order_details">
+                        <div class="order_img"><img src="imgs/orders/burger2sm.jpg" loading="lazy" alt=""></div>
+                        <div class="order_num">1</div>
+                        <div class="order_name">داديز شرومس</div>
+                        <div class="order_size">200 جرام</div>
+                    </div>
+                    <div class="order_details">
+                        <div class="order_img"><img src="imgs/orders/crepe2sm.jpg" loading="lazy" alt=""></div>
+                        <div class="order_num">1</div>
+                        <div class="order_name">تشيكن رانش</div>
+                        <div class="order_size">عادي</div>
+                    </div>
+                </div>
+                <div class="customer_note_box">
+                    <div class="note_title">ملحوظة :</div>
+                    <div class="note_text">زود كاتشب ، ومتحطش ورق عنب عشان مبحبهوش</div>
+                </div>
+                <div class="order_btns_box">
+                    <div class="order_done"><button>تسليم الطلب</button></div>
+                </div>
+            </div>
+            <div class="full_order_box">
+                <div class="customer_details_box">
+                    <div class="customer_img">
+                        <img src="imgs/categories/crepe.jpg" loading="lazy" alt="">
+                    </div>
+                    <div class="customer_details">
+                        <div class="customer_name">طاولة 1</div>
+                        <div class="order_time">
+                            <span class="material-icons-outlined">
+                                schedule
+                            </span>
+                            منذ 5 دقائق
+                        </div>
+                    </div>
+                    <div class="order_options">
+                        <span class="dots"></span>
+                    </div>
+                </div>
+                <div class="order_details_box">
+
+                    <div class="order_details">
+                        <div class="order_img"><img src="imgs/orders/crepe2sm.jpg" loading="lazy" alt=""></div>
+                        <div class="order_num">1</div>
+                        <div class="order_name">تشيكن رانش</div>
+                        <div class="order_size">عادي</div>
+                    </div>
+                </div>
+
+                <div class="order_btns_box">
+                    <div class="order_done"><button>تسليم الطلب</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="customer_order_box">
+            <a href="#show_order" class="customer_order_details show_order_deatils">
+                عرض الطلب
+                <span class="material-icons-outlined">
+                    fastfood
+                </span>
+            </a>
+        </div>
+        <div class="show_order_box">
+            <div class="show_order"></div>
+            <div class="order_btns">
+                <div class="delete_order" onclick="history.back()">
+                    <span class="material-icons-outlined">
+                        delete
+                    </span>
+                    حذف الطلب
+                </div>
+                <div class="add_note">
+                    <span class="material-icons-outlined">
+                        info
+                    </span>
+                    أضف ملحوظة
+                </div>
+                <div class="send_order">
+                    <span class="material-icons-outlined">
+                        send
+                    </span>
+                    أرسل الطلب
+                </div>
+            </div>
+        </div>
+        <div class="add_note_box">
+            <div class="add_note_title">أضف ملحوظة للطاهي</div>
+            <div class="add_note_input"><textarea name="" id="" placeholder="أضف ملحوظة هنا ..." cols="30"
+                    rows="9"></textarea></div>
+            <div class="add_note_btn">
+                <button>حفظ</button>
+            </div>
+            <div class="close_btn">
+                <span class="material-icons-outlined">
+                    close
+                </span>
+            </div>
+        </div>
+        <div class="about_us_page">
+            <div class="about_us_cover">
+                <img class="img_cover" src="https://705restaurante.com.br/wp-content/uploads/restaurante-705-img2.jpg"
+                    alt="">
+                <div class="about_us_img">
+                    <img src="imgs/logo.png" alt="">
+                </div>
+            </div>
+            <div class="restaurante_name">
+                إسم المطعم
+            </div>
+            <div class="about_us_text">
+                <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                    يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                    التطبيق.
+                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن
+                    يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج
+                    العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                    ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى
+                    أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا
+                    يليق.
+                    هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو
+                    حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+                </p>
+            </div>
+        </div>
+        <div class="queue_box">
+            <div class="queue_title">شكرا علي تقديم طلبك !</div>
+            <div class="queue_details">
+                برجاء الانتظار قليلا حتي يتم بدأ العمل علي الطلب الخاص بك.
+            </div>
+            <div class="queue_text_box">
+                <div class="queue_text">
+                    عدد الأشخاص
+                    <br>
+                    في قائمة الانتظار
+                </div>
+                <div class="queue_num">
+                    <span>5</span>
+                    أشخاص
+                </div>
+            </div>
+            <div class="queue_btns">
+                <button>إلغاء الطلب</button>
+                <button>تعديل الطلبات</button>
+            </div>
+            <div class="add_more_title">يمكنك أيضا طلب :</div>
+            <div class="order_page">
+                <div class="order_box">
+                    <div class="order_img">
+                        <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet1.jpg"
+                            src-data-sm="imgs/orders/sweet1sm.jpg" src="imgs/orders/sweet1sm.jpg" alt="">
+                    </div>
+                    <div class="order_text">
+                        <div class="order_title">ريد فيلفيت</div>
+                        <div class="order_details">كيك ريد فيلفت وجبنة كريمى</div>
+                        <div class="order_price">
+                            <span>25</span>
+                            جنيه
+                        </div>
+                        <div class="order_num">
+                            <div class="value-button decrease">-</div>
+                            <input class="input_num" type="number" min="0" max="999" value="0" />
+                            <div class="value-button increase">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order_box">
+                    <div class="order_img">
+                        <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet3.jpg"
+                            src-data-sm="imgs/orders/sweet3sm.jpg" src="imgs/orders/sweet3sm.jpg" alt="">
+                    </div>
+                    <div class="order_text">
+                        <div class="order_title">تارت مورو</div>
+                        <div class="order_details">سابليه، كريمة كراميل، كيك فادج، قطع مورو، صوص كراميل وكريمة
+                            بيضاء
+                        </div>
+                        <div class="order_price">
+                            <span>27</span>
+                            جنيه
+                        </div>
+                        <div class="order_num">
+                            <div class="value-button decrease">-</div>
+                            <input class="input_num" type="number" min="0" max="999" value="0" />
+                            <div class="value-button increase">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order_box">
+                    <div class="order_img">
+                        <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet5.jpg"
+                            src-data-sm="imgs/orders/sweet5sm.jpg" src="imgs/orders/sweet5sm.jpg" alt="">
+                    </div>
+                    <div class="order_text">
+                        <div class="order_title">تارت عين جمل</div>
+                        <div class="order_details">سابليه ابيض، كريمة باسترى، عين جمل وصوص كراميل</div>
+                        <div class="order_price">
+                            <span>27</span>
+                            جنيه
+                        </div>
+                        <div class="order_num">
+                            <div class="value-button decrease">-</div>
+                            <input class="input_num" type="number" min="0" max="999" value="0" />
+                            <div class="value-button increase">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order_box">
+                    <div class="order_img">
+                        <img class="order_img_sm" loading="lazy" src-data="imgs/orders/sweet4.jpg"
+                            src-data-sm="imgs/orders/sweet4sm.jpg" src="imgs/orders/sweet4sm.jpg" alt="">
+                    </div>
+                    <div class="order_text">
+                        <div class="order_title">فادج</div>
+                        <div class="order_details">كيك فادج، بسكويت فادج، موس شوكولاتة ومكسرات</div>
+                        <div class="order_price">
+                            <span>25</span>
+                            جنيه
+                        </div>
+                        <div class="order_num">
+                            <div class="value-button decrease">-</div>
+                            <input class="input_num" type="number" min="0" max="999" value="0" />
+                            <div class="value-button increase">+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="customer_order_box">
+                <div class="customer_order_details">
+                    إضافة للطلب
+                    <span class="material-icons-outlined">
+                        fastfood
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="waiting_order">
+            <div class="waitting_text">
+                ... جاري العمل علي طلبك
+            </div>
+            <img
+                src="https://img.wattpad.com/b86f8d3b8e759598fe48ab9cc43625f5b0483343/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f74336d67494c6864616d416c75413d3d2d313133393936343531302e313661633830316665663332393637633330323839353639373034332e676966">
+        </div>
+        <div class="cover" id='cover'></div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+        });
+    </script>
+</body>
+
+</html>
