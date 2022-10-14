@@ -23,7 +23,7 @@
 
     <div class="nav_bar">
         <div class="profile_box">
-            <div class="profile_pic"><img src="imgs/man.png" alt=""></div>
+            <div class="profile_pic"><img loading="lazy" src="imgs/man.png" alt=""></div>
             <div class="profile_name">admin admin</div>
         </div>
         <div class="nav_links_box">
@@ -79,14 +79,38 @@
                     arrow_back
                 </div>
             </div>
-            <div class="page_name">الأصناف</div>
+            <div class="page_name">اسم المستخدم</div>
             <div class="menu_btn">
                 <span class="header_btn material-icons-outlined">
                     menu
                 </span>
             </div>
         </header>
-        <div class="categories">
+        <div class="user_name_box">
+            <div class="user_name">
+                <div class="user_name_text">برجاء إدخال اسم المستخدم</div>
+                <div class="input_box">
+                    <label for="user_name_input">اسم المستخدم :</label>
+                    <input type="text" id="user_name_input" placeholder="مثال : طاولة رقم 1">
+                </div>
+                <div class="chips_box">
+                    <label for="user_name_input">اختصارات :</label>
+                    <div class="chip">طاولة رقم 1</div>
+                    <div class="chip">طاولة رقم 2</div>
+                    <div class="chip">طاولة رقم 3</div>
+                    <div class="chip">طاولة رقم 4</div>
+                </div>
+                <div class="input_box">
+                    <button id="send_user_name">
+                        إرسال
+                        <span class="material-icons-outlined">
+                            send
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="categories hide">
         </div>
         <div class="swiper-container" dir="rtl">
             <div class="swiper-wrapper">
@@ -717,10 +741,10 @@
         </div>
         <div class="about_us_page">
             <div class="about_us_cover">
-                <img class="img_cover" src="https://705restaurante.com.br/wp-content/uploads/restaurante-705-img2.jpg"
-                    alt="">
+                <img class="img_cover" loading="lazy"
+                    src="https://705restaurante.com.br/wp-content/uploads/restaurante-705-img2.jpg" alt="">
                 <div class="about_us_img">
-                    <img src="imgs/logo.png" alt="">
+                    <img src="imgs/logo.png" loading="lazy" alt="">
                 </div>
             </div>
             <div class="restaurante_name">
@@ -856,7 +880,7 @@
             <div class="waitting_text">
                 ... جاري العمل علي طلبك
             </div>
-            <img
+            <img loading="lazy"
                 src="https://img.wattpad.com/b86f8d3b8e759598fe48ab9cc43625f5b0483343/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f74336d67494c6864616d416c75413d3d2d313133393936343531302e313661633830316665663332393637633330323839353639373034332e676966">
         </div>
         <div class="cover" id='cover'></div>

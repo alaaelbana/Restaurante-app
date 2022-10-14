@@ -33,6 +33,9 @@ function page_hash() {
 $('.swiper-slide .order_page').hide()
 var idleTime = 0;
 $(document).ready(function () {
+    if (window.location.hash == "") {
+        window.location.hash = "#home"
+    }
     // Increment the idle time counter every minute.
     var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
     // Zero the idle timer on mouse movement.
@@ -92,7 +95,10 @@ function back_btn() {
     }
 }
 $('.menu_btn').click(function () {
-    $('.nav_bar').toggleClass('nav_show')
+    $('.nav_bar').show()
+    setTimeout(() => {
+        $('.nav_bar').toggleClass('nav_show')
+    }, 10);
     $('.cover').fadeToggle()
 })
 $('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories').click(function () {
@@ -218,21 +224,23 @@ $(".order_num .input_num").change(function () {
 $('.send_order').click(function () {
     window.location.hash = '#queue_order'
 })
+
 var val = 0
 if (window.history && window.history.pushState) {
     $(window).on('popstate', function () {
         $('.pages_nav').removeClass('pages_nav_show')
-        if (window.location.hash == "") {
+        if (window.location.hash == "#home") {
+            $('.user_name_box').show()
+            $('.page_name').text('اسم المستخدم')
+        } else {
+            $('.user_name_box').hide()
+        }
+        if (window.location.hash == "#categories") {
             $('.categories').removeClass('hide')
             $('.page_name').text('الأصناف')
             $('.swiper-slide .order_page').hide()
         } else {
             $('.categories').addClass('hide')
-        }
-        if (window.location.hash == "#home") {
-            $('.categories').removeClass('hide')
-            $('.page_name').text('الأصناف')
-            $('.swiper-slide .order_page').hide()
         }
         $('.swiper-slide .order_page').each(function () {
             for (let i = 0; i < $(this).find('.input_num').length; i++) {
@@ -459,3 +467,15 @@ function queue_order_btn() {
         }
     })
 }
+
+
+$(".user_name_box .user_name .chips_box .chip").click(function () {
+    $(".user_name_box .input_box input").val($(this).text())
+})
+
+$('.user_name_box .input_box #send_user_name').click(function () {
+    if ($(".user_name_box .input_box input").val() != "") {
+        $(".user_name_box .user_name .chips_box").append('<div class="chip">' + $('.user_name_box .input_box input').val() + '</div>')
+        window.location.hash = "#categories"
+    }
+})

@@ -121,6 +121,7 @@ button, input, a, textarea {
     overflow: auto;
     direction: rtl;
     font-size: 16px;
+    display: none;
     background: linear-gradient(180deg, rgb(40 42 47) 0%, rgb(36 39 43) 50%, rgb(30 32 36) 100%);
 }
 
@@ -204,7 +205,7 @@ button, input, a, textarea {
     transition: .5s left;
 }
 
-.categories {
+.categories, .user_name_box {
     margin: 65px 0 0;
     padding: 0px 10px 0;
     display: flex;
@@ -219,6 +220,84 @@ button, input, a, textarea {
     align-content: flex-start;
     overflow: auto;
     background: linear-gradient(180deg, rgb(40 42 47) 0%, rgb(36 39 43) 50%, rgb(30 32 36) 100%);
+}
+
+.user_name_box {
+    padding: 10px 15px 0;
+}
+
+.user_name_box .user_name {
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #24262c;
+    border-radius: 8px;
+    box-shadow: 0 0 15px -3px rgba(16, 16, 16, 0.5);
+}
+
+.user_name_box .user_name .user_name_text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-right: -10px
+}
+
+.user_name_box .input_box label {
+    font-size: 13px;
+    color: #eee;
+}
+
+.user_name_box .input_box input {
+    padding: 8px 10px;
+    color: #eee;
+    border: 1px solid #2a2d32;
+    background-color: transparent;
+    font-family: 'tajawal', 'Roboto', sans-serif;
+    margin-top: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.user_name_box .input_box button {
+    background: linear-gradient(90deg, rgb(252, 90, 26) 0%, rgb(248, 39, 18) 100%);
+    font-family: 'tajawal', sans-serif;
+    justify-content: center;
+    margin: 35px auto 0px;
+    border-radius: 50px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: default;
+    direction: ltr;
+    color: #fff;
+    display: flex;
+    border: none;
+    height: 32px;
+    width: 55%;
+    gap: 5px;
+}
+
+.user_name_box .input_box button span {
+    font-size: 17px;
+}
+
+.user_name_box .user_name .chips_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px -5px;
+}
+
+.user_name_box .user_name .chips_box label {
+    width: 100%;
+}
+
+.user_name_box .user_name .chips_box .chip {
+    padding: 5px 12px;
+    font-size: 11px;
+    border-radius: 50px;
+    box-shadow: -3px -2px 8px -6px rgba(255, 255, 255, 0.41), 4px 4px 8px -2px rgba(0, 0, 0, 0.3);
+
 }
 
 .categories.hide {
