@@ -222,7 +222,7 @@ $(".order_num .input_num").change(function () {
     $(this).parents('.order_box').find('.nice-select .selected').attr('price_val', $(this).val())
 });
 $('.send_order').click(function () {
-    window.location.hash = '#queue_order'
+    window.location.hash = '#waiting_order'
 })
 
 var val = 0
@@ -418,6 +418,7 @@ if (window.history && window.history.pushState) {
         }
         if (window.location.hash == "#waiting_order") {
             $('.waiting_order').show()
+            $('.page_name').text('يرجي الإنتظار')
         } else {
             $('.waiting_order').hide()
         }

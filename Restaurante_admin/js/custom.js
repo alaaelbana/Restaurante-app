@@ -59,6 +59,17 @@ document.getElementById("cover").addEventListener('touchmove', function (e) {
 }, {
     passive: true
 });
+$('.chart_2_link').click(function () {
+    document.getElementById('chart_2').scrollIntoView({
+        behavior: 'smooth'
+    })
+})
+$('.chart_1_link').click(function () {
+    document.getElementById('chart_1').scrollIntoView({
+        behavior: 'smooth'
+    })
+})
+
 var if_edit = 0
 var if_delete = 0
 if (window.history && window.history.pushState) {

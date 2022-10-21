@@ -132,13 +132,13 @@
     </header>
     <div class="admin_statistics">
         <div class="carts_box">
-            <a class="cart_single">
+            <div class="cart_single chart_2_link">
                 <div class="cart_img"><img src="imgs/order.png" alt=""></div>
                 <div class="cart_num_box">
                     <div class="cart_num">150</div>
                     <div class="cart_title">طلب جديد</div>
                 </div>
-            </a>
+            </div>
             <a href="#orders" class="cart_single">
                 <div class="cart_img"><img src="imgs/order2.png" alt=""></div>
                 <div class="cart_num_box">
@@ -153,13 +153,13 @@
                     <div class="cart_title">طلب غير مدفوع</div>
                 </div>
             </a>
-            <a class="cart_single">
+            <div class="cart_single chart_1_link">
                 <div class="cart_img"><img src="imgs/money.png" alt=""></div>
                 <div class="cart_num_box">
                     <div class="cart_num">1500 جـ</div>
                     <div class="cart_title">دخل اليوم</div>
                 </div>
-            </a>
+            </div>
         </div>
         <div class="income_chart_box">
             <div class="income_title">
@@ -213,7 +213,7 @@
     </div>
     <div class="edit_category_box">
         <div class="edit_category_title">تعديل التصنيفات
-            <span>إضغط علي التصنيف المراد التعديل عليه</span>
+            <span>إضغط علي التصنيف الذي تريد تعديله</span>
         </div>
         <div class="edit_category">
             <a href="#edit_category_single" class="category_box">
@@ -1305,7 +1305,8 @@
     <script>
         $(document).ready(function () {
             $('select').niceSelect();
-            categorie_chart_active()
+            categorie_chart_active();
+            aa()
         });
         let ctx = document.getElementById("chart_1").getContext('2d');
 
@@ -1318,93 +1319,109 @@
         gradientBkgrd.addColorStop(1, "rgba(249,135,94,0)");
 
 
-        const myChart = new Chart(
-            document.getElementById('chart_1'),
-            {
-                type: 'line',
-                data: {
-                    labels: [
-                        'سبت',
-                        'أحد',
-                        'إثنان',
-                        'ثلاثاء',
-                        'أربعاء',
-                        'خميس',
-                        'جمعه'
-                    ],
-                    datasets: [
-                        {
-                            label: 'الدخل اليومي',
-                            backgroundColor: gradientBkgrd,
-                            borderColor: gradientStroke,
-                            data: [1350, 1450, 1300, 1350, 1500, 1550, 1600],
-                            pointBackgroundColor: gradientStroke,
-                            pointBorderColor: "rgba(255,255,255,0)",
-                            pointHoverBorderColor: "rgba(220,220,220,1)",
-                            pointHoverBorderWidth: 3,
-                            pointHoverRadius: 5,
-                        }
-                    ]
-                },
-                options: {
-                    fill: true,
-                    tension: 0.2,
-                    interaction: {
-                        intersect: false
-                    },
-                    radius: 0,
-                    layout: {
-                        padding: 0
-                    },
-                    plugins: {
-                        legend: {
-                            display: false,
-                        },
-                    },
-                    scales: {
-                        xAxes: {
-                            ticks: {
-                                color: '#bbb',
-                                font: {
-                                    size: 11,
-                                    weight: 700,
-                                    family: "'tajawal','Roboto', sans-serif"
-                                }
-                            },
-                            grid: {
-                                color: 'transparent',
-                            }
-                        },
-                        yAxes: {
-                            // position: 'right',
-                            ticks: {
-                                // stepSize: 100,
-                                color: '#bbb',
-                                font: {
-                                    size: 12,
-                                    family: "'tajawal','Roboto', sans-serif"
-                                }
-                            },
-                            grid: {
-                                color: '#7771'
-                            },
-                            suggestedMin: 1200,
-                            suggestedMax: 1700
-                        },
 
-                    },
+        const day_data = ['سبت', 'أحد', 'إثنان', 'ثلاثاء', 'أربعاء', 'خميس', 'جمعه'];
+        const month_data = [];
+        for (let i = 1; i < 31; i++) { month_data.push(i); }
+        var date_option, date_chart
+        date_chart = day_data
+        $('.income_chart_box .income_title select').change(function () {
+            aa()
+        })
 
-                    tooltips: {
-                        backgroundColor: '#fff',
-                        displayColors: false,
-                        titleFontColor: '#000',
-                        bodyFontColor: '#000'
-
-                    },
-
-                }
-            }
+        var myChart = new Chart(
+            document.getElementById('chart_1')
         );
+        function aa() {
+            date_option = $('.income_chart_box .income_title .nice-select .list .selected').attr('data-value')
+            if (date_option > 1) {
+                date_chart = day_data
+            } else {
+                date_chart = month_data
+            }
+            myChart.destroy()
+            myChart = new Chart(
+                document.getElementById('chart_1'),
+                {
+                    type: 'line',
+                    data: {
+                        labels: [
+                            ...date_chart
+                        ],
+                        datasets: [
+                            {
+                                label: 'الدخل اليومي',
+                                backgroundColor: gradientBkgrd,
+                                borderColor: gradientStroke,
+                                data: [1350, 1450, 1300, 1350, 1500, 1550, 1600, 1350, 1350, 1500, 1350, 1500, 1550, 1600, 1350, 1450, 1300, 1450, 1300, 1550, 1600, 1350, 1450, 1300, 1350, 1500, 1550, 1600, 1550, 1600],
+                                pointBackgroundColor: gradientStroke,
+                                pointBorderColor: "rgba(255,255,255,0)",
+                                pointHoverBorderColor: "rgba(220,220,220,1)",
+                                pointHoverBorderWidth: 3,
+                                pointHoverRadius: 5,
+                            }
+                        ]
+                    },
+                    options: {
+                        fill: true,
+                        tension: 0.2,
+                        interaction: {
+                            intersect: false
+                        },
+                        radius: 0,
+                        layout: {
+                            padding: 0
+                        },
+                        plugins: {
+                            legend: {
+                                display: false,
+                            },
+                        },
+                        scales: {
+                            xAxes: {
+                                ticks: {
+                                    color: '#bbb',
+                                    font: {
+                                        size: 11,
+                                        weight: 700,
+                                        family: "'tajawal','Roboto', sans-serif"
+                                    }
+                                },
+                                grid: {
+                                    color: 'transparent',
+                                }
+                            },
+                            yAxes: {
+                                // position: 'right',
+                                ticks: {
+                                    // stepSize: 100,
+                                    color: '#bbb',
+                                    font: {
+                                        size: 12,
+                                        family: "'tajawal','Roboto', sans-serif"
+                                    }
+                                },
+                                grid: {
+                                    color: '#7771'
+                                },
+                                suggestedMin: 1200,
+                                suggestedMax: 1700
+                            },
+
+                        },
+
+                        tooltips: {
+                            backgroundColor: '#fff',
+                            displayColors: false,
+                            titleFontColor: '#000',
+                            bodyFontColor: '#000'
+
+                        },
+
+                    }
+                }
+            );
+        }
 
 
         var chart_name, chart_val, charts_color_num, single_categorie, single_categorie_val
@@ -1420,18 +1437,15 @@
             $(".select_categorie").append('<option value="' + [i + 1] + '">' + categories[i] + '</option>')
         }
 
-
-
-        var dont = new Chart(
+        dont = new Chart(
             document.getElementById('chart_2')
         );
+
         function categorie_chart_active() {
             categorie_page = $('.categories_chart_box .nice-select .list .selected').attr('data-value')
-            single_categorie = ["بيتزا خضار"]
-            single_categorie_val = ["55"]
             if (categorie_page > 0) {
-                chart_name = single_categorie
-                chart_val = single_categorie_val
+                chart_name = ["بيتزا خضار"]
+                chart_val = ["55"]
             } else {
                 chart_name = categories
                 chart_val = categories_val

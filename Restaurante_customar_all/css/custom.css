@@ -227,17 +227,17 @@ button, input, a, textarea {
 }
 
 .user_name_box .user_name {
-    width: 100%;
-    padding: 30px 20px;
-    background-color: #24262c;
-    border-radius: 8px;
     box-shadow: 0 0 15px -3px rgba(16, 16, 16, 0.5);
+    background-color: #24262c;
+    padding: 30px 20px;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .user_name_box .user_name .user_name_text {
-    font-size: 18px;
     margin-bottom: 20px;
-    margin-right: -10px
+    margin-right: -10px;
+    font-size: 18px;
 }
 
 .user_name_box .input_box label {
@@ -246,16 +246,16 @@ button, input, a, textarea {
 }
 
 .user_name_box .input_box input {
-    padding: 8px 10px;
-    color: #eee;
-    border: 1px solid #2a2d32;
-    background-color: transparent;
     font-family: 'tajawal', 'Roboto', sans-serif;
+    background-color: transparent;
+    border: 1px solid #2a2d32;
+    border-radius: 5px;
+    padding: 8px 10px;
     margin-top: 8px;
     font-size: 14px;
-    border-radius: 5px;
     max-width: 100%;
     min-width: 100%;
+    color: #eee;
 }
 
 .user_name_box .input_box button {
@@ -1026,6 +1026,26 @@ button, input, a, textarea {
 
 .waiting_order img {
     border-radius: 5px;
+}
+
+.waiting_order .input_box a {
+    background: linear-gradient(90deg, rgb(252, 90, 26) 10%, rgb(248, 39, 18) 100%);
+    justify-content: center;
+    margin: 35px auto 0px;
+    border-radius: 50px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: default;
+    direction: ltr;
+    color: #fff;
+    display: flex;
+    height: 32px;
+    gap: 3px;
+}
+
+.waiting_order .input_box a span {
+    font-size: 22px;
 }
 
 .queue_box {
