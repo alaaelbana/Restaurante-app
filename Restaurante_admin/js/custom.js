@@ -44,6 +44,9 @@ $('.cover ,.nav_bar .nav_links_box a,.nav_links_box .nav_categories a').click(fu
     if (window.location.hash == "#delete_category_single") {
         history.back()
     }
+    if (window.location.hash == "#remove_order") {
+        history.back()
+    }
     $('.expand_more').removeClass('rotat')
     $('.nav_bar').removeClass('nav_show')
     $('.nav_bar').fadeOut()
@@ -114,24 +117,22 @@ if (window.history && window.history.pushState) {
             $('.edit_category_sinle').hide()
         }
         if (window.location.hash == "#delete_category") {
-            $('.delete_confirmation_box').hide()
+            $('.delete_category_conf').hide()
             $('.page_name').text('حذف تصنيف')
             $('.delete_category_box').show()
             $('.cover').fadeOut()
-
         } else if (window.location.hash == "#delete_category_single") {
             if (if_delete == 1) {
                 $('.cover').fadeIn()
-                $('.delete_confirmation_box').show()
+                $('.delete_category_conf').show()
                 if_delete = 0
             } else {
                 history.back()
             }
         } else {
             if_delete = 0
-            $('.delete_confirmation_box').hide()
+            $('.delete_category_conf').hide()
             $('.delete_category_box').hide()
-            $('.cover').fadeOut()
             $('.nav_categories').slideUp()
             $('.expand_more').removeClass('rotat')
             $('.nav_bar').removeClass('nav_show')
@@ -160,8 +161,16 @@ if (window.history && window.history.pushState) {
         if (window.location.hash == "#orders") {
             $('.receive_orders_box').show()
             $('.page_name').text('الطلبات')
+            $('.cover').fadeOut()
+            $('.delete_order_conf').hide()
+        } else if (window.location.hash == "#remove_order") {
+            $('.receive_orders_box').show()
+            $('.page_name').text('الطلبات')
+            $('.cover').fadeIn()
+            $('.delete_order_conf').show()
         } else {
             $('.receive_orders_box').hide()
+            $('.delete_order_conf').hide()
         }
 
         if (window.location.hash == "#tax") {
@@ -229,7 +238,7 @@ $('.edit_category_box .category_box').click(function () {
 $('.delete_category_box .category_box').click(function () {
     if_delete = 1
 })
-$('.delete_confirmation_box .delete_confirmation .delete_confirmation_btns button').click(function () {
+$('.delete_box .delete_confirmation .delete_confirmation_btns button').click(function () {
     history.back()
 })
 

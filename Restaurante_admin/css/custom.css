@@ -513,7 +513,7 @@ button, input, a, textarea {
 .add_product .product_size_price_box.show {
     height: auto;
 }
-    
+
 .add_product .input_box.out_of_stock {
     flex-direction: row;
     align-items: center;
@@ -717,7 +717,7 @@ button, input, a, textarea {
     bottom: -5px;
 }
 
-.delete_confirmation_box {
+.delete_box {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -730,7 +730,7 @@ button, input, a, textarea {
 
 }
 
-.delete_confirmation_box .delete_confirmation {
+.delete_box .delete_confirmation {
     background-color: #202227;
     padding: 25px 15px;
     box-shadow: 0 0 10px -3px rgb(20 20 20 / 73%);
@@ -739,25 +739,26 @@ button, input, a, textarea {
     border-radius: 8px;
 }
 
-.delete_confirmation_box .delete_confirmation .delete_confirmation_title {
+.delete_box .delete_confirmation .delete_confirmation_title {
     font-size: 18px;
 }
 
-.delete_confirmation_box .delete_confirmation .delete_confirmation_description {
+.delete_box .delete_confirmation .delete_confirmation_description {
     font-size: 13px;
     line-height: 1.5;
-    padding: 15px 4% 25px;
+    padding: 16px 4% 28px;
     color: #aaa;
+    line-height: 1.6;
 }
 
-.delete_confirmation_box .delete_confirmation .delete_confirmation_btns {
+.delete_box .delete_confirmation .delete_confirmation_btns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 15px;
 }
 
-.delete_confirmation_box .delete_confirmation .delete_confirmation_btns button {
+.delete_box .delete_confirmation .delete_confirmation_btns button {
     padding: 6px 40px;
     border-radius: 5px;
     display: flex;
@@ -765,16 +766,16 @@ button, input, a, textarea {
     justify-content: center;
     font-size: 13px;
     font-weight: 600;
-    box-shadow: -3px -3px 7px -6px rgb(255 255 255 / 40%), 3px 3px 8px -2px rgb(0 0 0 / 35%);
+    box-shadow: -3px -3px 6px -6px rgb(255 255 255 / 40%), 3px 3px 8px -2px rgb(0 0 0 / 35%);
     background-color: transparent;
     color: #fff;
     font-family: 'tajawal', 'Roboto', sans-serif;
     border: none;
 }
 
-.delete_confirmation_box .delete_confirmation .delete_confirmation_btns .delete_btn {
+.delete_box .delete_confirmation .delete_confirmation_btns .delete_btn {
     background: linear-gradient(90deg, rgb(252, 90, 26) 0%, rgb(248, 39, 18) 100%);
-    padding: 6px 30px;
+    padding: 6px 40px;
     box-shadow: none;
 }
 
@@ -960,8 +961,9 @@ button, input, a, textarea {
 
 .receive_orders_box .full_order_box .customer_details_box .order_options {
     position: absolute;
-    left: 10px;
-    padding: 15px;
+    margin-top: -5px;
+    padding: 20px;
+    left: 5px;
 }
 
 .receive_orders_box .full_order_box .customer_details_box .order_options .dots {
@@ -971,6 +973,34 @@ button, input, a, textarea {
     border-radius: 50%;
     display: block;
     box-shadow: 7px 0px 0px #fff, -7px 0px 0px #fff;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .order_options .order_options_btn {
+    border-radius: 5px;
+    position: absolute;
+    top: 75%;
+    background-color: #24242a;
+    left: 20px;
+    box-shadow: 0px 0px 6px -3px rgb(0 0 0 / 60%);
+    display: none;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .order_options:hover .order_options_btn {
+    display: block;
+}
+
+.receive_orders_box .full_order_box .customer_details_box .order_options .order_options_btn a {
+    font-size: 12px;
+    font-family: 'tajawal', sans-serif;
+    background-color: transparent;
+    min-width: 120px;
+    height: 33px;
+    color: #e24c4c;
+    border: none;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .receive_orders_box .full_order_box .order_details_box {
@@ -1088,6 +1118,7 @@ button, input, a, textarea {
 .swiper-container {
     width: 100%;
     height: 100%;
+    direction: rtl;
 }
 
 .swiper-wrapper.no_animation {
@@ -1252,7 +1283,6 @@ button, input, a, textarea {
 
 .acounts_page .acounts_box .btns_box {
     display: flex;
-    flex-direction: row-reverse;
     padding: 15px 5px 3px;
     gap: 15px;
 }
